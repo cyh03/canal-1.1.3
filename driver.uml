@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.parse.driver.mysql.MysqlConnector</OriginalElement>
+  <nodes>
+    <node x="2214.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.RegisterSlaveCommandPacket</node>
+    <node x="1708.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.socket.BioSocketChannelPool</node>
+    <node x="1278.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.HandshakeInitializationPacket</node>
+    <node x="170.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.ClientAuthenticationPacket</node>
+    <node x="616.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.BinlogDumpCommandBuilder</node>
+    <node x="1441.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.MySQLPasswordEncrypter</node>
+    <node x="2869.0" y="78.0">com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket</node>
+    <node x="2680.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.socket.SocketChannelPool</node>
+    <node x="1959.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.MysqlUpdateExecutor</node>
+    <node x="0.0" y="337.0">com.alibaba.otter.canal.parse.driver.mysql.socket.BioSocketChannel</node>
+    <node x="1124.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.FieldPacket</node>
+    <node x="3206.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.SemiAckCommandPacket</node>
+    <node x="2907.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.ResultSetPacket</node>
+    <node x="113.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.socket.SocketChannel</node>
+    <node x="1730.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.BinlogDumpGTIDCommandPacket</node>
+    <node x="3866.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.ByteHelper</node>
+    <node x="3432.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.AuthSwitchRequestMoreData</node>
+    <node x="899.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.LengthCodedStringReader</node>
+    <node x="194.0" y="337.0">com.alibaba.otter.canal.parse.driver.mysql.socket.NettySocketChannel</node>
+    <node x="2488.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.QueryCommandPacket</node>
+    <node x="2012.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.QuitCommandPacket</node>
+    <node x="1912.25" y="78.0">com.alibaba.otter.canal.parse.driver.mysql.packets.HeaderPacket</node>
+    <node x="808.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.EOFPacket</node>
+    <node x="3948.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.DataPacket</node>
+    <node x="1174.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.socket.NettySocketChannelPool</node>
+    <node x="444.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.ResultSetHeaderPacket</node>
+    <node x="2956.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.BinlogDumpCommandPacket</node>
+    <node x="1932.25" y="0.0">com.alibaba.otter.canal.parse.driver.mysql.packets.IPacket</node>
+    <node x="3516.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.CharsetUtil</node>
+    <node x="147.0" y="410.0">com.alibaba.otter.canal.parse.driver.mysql.utils.MSC</node>
+    <node x="0.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.RowDataPacket</node>
+    <node x="3695.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.packets.Capability</node>
+    <node x="0.0" y="410.0">com.alibaba.otter.canal.parse.driver.mysql.packets.UUIDSet</node>
+    <node x="2202.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.ChannelBufferHelper</node>
+    <node x="2698.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.client.AuthSwitchResponsePacket</node>
+    <node x="429.0" y="337.0">com.alibaba.otter.canal.parse.driver.mysql.packets.MysqlGTIDSet</node>
+    <node x="3321.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.utils.PacketManager</node>
+    <node x="3698.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.AuthSwitchRequestPacket</node>
+    <node x="946.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.Reply323Packet</node>
+    <node x="678.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.OKPacket</node>
+    <node x="2445.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.MysqlQueryExecutor</node>
+    <node x="1576.0" y="186.0">com.alibaba.otter.canal.parse.driver.mysql.packets.server.ErrorPacket</node>
+    <node x="449.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.packets.GTIDSet</node>
+    <node x="3118.0" y="259.0">com.alibaba.otter.canal.parse.driver.mysql.MysqlConnector</node>
+    <node x="756.0" y="78.0">com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.BinlogDumpCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="3071.0" y="166.0" />
+      <point x="2951.5" y="166.0" />
+      <point x="7.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.socket.BioSocketChannel" target="com.alibaba.otter.canal.parse.driver.mysql.socket.SocketChannel">
+      <point x="0.0" y="-14.0" />
+      <point x="87.0" y="312.0" />
+      <point x="150.5" y="312.0" />
+      <point x="-37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.Reply323Packet" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="1025.0" y="166.0" />
+      <point x="891.6666666666665" y="166.0" />
+      <point x="24.666666666666515" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.DataPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="4011.0" y="126.0" />
+      <point x="3011.5" y="126.0" />
+      <point x="67.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.EOFPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.IPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="867.0" y="53.0" />
+      <point x="1949.25" y="53.0" />
+      <point x="-34.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.QuitCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="2103.0" y="136.0" />
+      <point x="2891.5" y="136.0" />
+      <point x="-52.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.RowDataPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="75.0" y="136.0" />
+      <point x="768.3333333333335" y="136.0" />
+      <point x="-98.66666666666652" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.QueryCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="2583.0" y="156.0" />
+      <point x="2921.5" y="156.0" />
+      <point x="-22.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.BinlogDumpGTIDCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="1861.0" y="126.0" />
+      <point x="2876.5" y="126.0" />
+      <point x="-67.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.IPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="2944.0" y="53.0" />
+      <point x="2017.25" y="53.0" />
+      <point x="34.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.ClientAuthenticationPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="297.0" y="146.0" />
+      <point x="793.0" y="146.0" />
+      <point x="-74.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.MysqlGTIDSet" target="com.alibaba.otter.canal.parse.driver.mysql.packets.GTIDSet">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.SemiAckCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="3309.0" y="156.0" />
+      <point x="2966.5" y="156.0" />
+      <point x="22.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.AuthSwitchResponsePacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="2817.0" y="166.0" />
+      <point x="2936.5" y="166.0" />
+      <point x="-7.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.HandshakeInitializationPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="1417.0" y="146.0" />
+      <point x="941.0" y="146.0" />
+      <point x="74.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.ErrorPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="1643.0" y="136.0" />
+      <point x="965.666666666667" y="136.0" />
+      <point x="98.66666666666697" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.FieldPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="1191.0" y="156.0" />
+      <point x="916.3333333333335" y="156.0" />
+      <point x="49.333333333333485" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.HeaderPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.IPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.AuthSwitchRequestPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="3813.0" y="136.0" />
+      <point x="2996.5" y="136.0" />
+      <point x="52.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.client.RegisterSlaveCommandPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="2341.0" y="146.0" />
+      <point x="2906.5" y="146.0" />
+      <point x="-37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.AuthSwitchRequestMoreData" target="com.alibaba.otter.canal.parse.driver.mysql.packets.CommandPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="3555.0" y="146.0" />
+      <point x="2981.5" y="146.0" />
+      <point x="37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.socket.NettySocketChannel" target="com.alibaba.otter.canal.parse.driver.mysql.socket.SocketChannel">
+      <point x="0.0" y="-14.0" />
+      <point x="289.0" y="312.0" />
+      <point x="225.5" y="312.0" />
+      <point x="37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.ResultSetHeaderPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="551.0" y="156.0" />
+      <point x="817.6666666666665" y="156.0" />
+      <point x="-49.333333333333485" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.driver.mysql.packets.server.OKPacket" target="com.alibaba.otter.canal.parse.driver.mysql.packets.PacketWithHeaderPacket">
+      <point x="0.0" y="-14.0" />
+      <point x="733.0" y="166.0" />
+      <point x="842.3333333333335" y="166.0" />
+      <point x="-24.666666666666515" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="79.0" y="14.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

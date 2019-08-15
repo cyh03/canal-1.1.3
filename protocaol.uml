@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.protocol.CanalEntry</OriginalElement>
+  <nodes>
+    <node x="359.895" y="0.0">com.alibaba.otter.canal.protocol.position.Position</node>
+    <node x="429.5" y="156.0">com.alibaba.otter.canal.protocol.position.LogIdentity</node>
+    <node x="336.0" y="78.0">com.alibaba.otter.canal.protocol.position.PositionRange</node>
+    <node x="392.91999999999996" y="234.0">com.alibaba.otter.canal.protocol.position.LogPosition</node>
+    <node x="382.0" y="307.0">com.alibaba.otter.canal.protocol.FlatMessage</node>
+    <node x="0.0" y="307.0">com.alibaba.otter.canal.protocol.ClientIdentity</node>
+    <node x="171.0" y="380.0">com.alibaba.otter.canal.protocol.Message</node>
+    <node x="4.0" y="78.0">com.alibaba.otter.canal.protocol.position.TimePosition</node>
+    <node x="166.0" y="78.0">com.alibaba.otter.canal.protocol.position.MetaqPosition</node>
+    <node x="0.0" y="380.0">com.alibaba.otter.canal.protocol.CanalEntry</node>
+    <node x="203.0" y="307.0">com.alibaba.otter.canal.protocol.CanalPacket</node>
+    <node x="0.0" y="156.0">com.alibaba.otter.canal.protocol.position.EntryPosition</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.protocol.position.LogIdentity" target="com.alibaba.otter.canal.protocol.position.Position">
+      <point x="0.0" y="-14.0" />
+      <point x="496.5" y="58.0" />
+      <point x="436.895" y="58.0" />
+      <point x="22.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.MetaqPosition" target="com.alibaba.otter.canal.protocol.position.Position">
+      <point x="0.0" y="-14.0" />
+      <point x="241.0" y="58.0" />
+      <point x="392.895" y="58.0" />
+      <point x="-22.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.EntryPosition" target="com.alibaba.otter.canal.protocol.position.TimePosition">
+      <point x="37.5" y="-14.0" />
+      <point x="112.5" y="131.0" />
+      <point x="110.5" y="131.0" />
+      <point x="35.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.LogPosition" target="com.alibaba.otter.canal.protocol.position.Position">
+      <point x="53.60000000000001" y="-14.0" />
+      <point x="513.52" y="214.0" />
+      <point x="574.0" y="214.0" />
+      <point x="574.0" y="48.0" />
+      <point x="458.895" y="48.0" />
+      <point x="44.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.TimePosition" target="com.alibaba.otter.canal.protocol.position.Position">
+      <point x="0.0" y="-14.0" />
+      <point x="75.0" y="48.0" />
+      <point x="370.895" y="48.0" />
+      <point x="-44.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.PositionRange" target="com.alibaba.otter.canal.protocol.position.Position">
+      <point x="0.0" y="-14.0" />
+      <point x="411.0" y="58.0" />
+      <point x="414.895" y="58.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.LogPosition" target="com.alibaba.otter.canal.protocol.position.EntryPosition">
+      <point x="-53.599999999999966" y="-14.0" />
+      <point x="406.32" y="214.0" />
+      <point x="37.5" y="214.0" />
+      <point x="-37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.protocol.position.LogPosition" target="com.alibaba.otter.canal.protocol.position.LogIdentity">
+      <point x="26.80000000000001" y="-14.0" />
+      <point x="486.71999999999997" y="204.0" />
+      <point x="530.0" y="204.0" />
+      <point x="33.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="287.0" y="204.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

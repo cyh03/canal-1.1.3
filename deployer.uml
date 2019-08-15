@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.deployer.CanalConstants</OriginalElement>
+  <nodes>
+    <node x="291.0" y="302.0">com.alibaba.otter.canal.deployer.monitor.remote.RemoteCanalConfigMonitor</node>
+    <node x="0.0" y="375.0">com.alibaba.otter.canal.deployer.CanalController</node>
+    <node x="16.0" y="151.0">com.alibaba.otter.canal.deployer.monitor.remote.RemoteInstanceMonitor</node>
+    <node x="0.0" y="78.0">com.alibaba.otter.canal.deployer.monitor.SpringInstanceConfigMonitor</node>
+    <node x="195.0" y="521.0">com.alibaba.otter.canal.deployer.CanalStater</node>
+    <node x="211.0" y="375.0">com.alibaba.otter.canal.deployer.CanalConstants</node>
+    <node x="299.0" y="151.0">com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoader</node>
+    <node x="167.0" y="0.0">com.alibaba.otter.canal.deployer.monitor.InstanceConfigMonitor</node>
+    <node x="374.0" y="521.0">com.alibaba.otter.canal.deployer.monitor.remote.ConfigItem</node>
+    <node x="203.0" y="448.0">com.alibaba.otter.canal.deployer.monitor.InstanceAction</node>
+    <node x="0.0" y="229.0">com.alibaba.otter.canal.deployer.monitor.remote.RemoteInstanceMonitorImpl</node>
+    <node x="291.0" y="229.0">com.alibaba.otter.canal.deployer.monitor.remote.DbRemoteConfigLoader</node>
+    <node x="0.0" y="521.0">com.alibaba.otter.canal.deployer.CanalLauncher</node>
+    <node x="282.0" y="78.0">com.alibaba.otter.canal.deployer.monitor.ManagerInstanceConfigMonitor</node>
+    <node x="0.0" y="302.0">com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoaderFactory</node>
+    <node x="0.0" y="448.0">com.alibaba.otter.canal.deployer.InstanceConfig</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.deployer.monitor.remote.DbRemoteConfigLoader" target="com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoader">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.deployer.monitor.SpringInstanceConfigMonitor" target="com.alibaba.otter.canal.deployer.monitor.InstanceConfigMonitor">
+      <point x="0.0" y="-14.0" />
+      <point x="131.0" y="53.0" />
+      <point x="220.5" y="53.0" />
+      <point x="-53.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.deployer.monitor.ManagerInstanceConfigMonitor" target="com.alibaba.otter.canal.deployer.monitor.InstanceConfigMonitor">
+      <point x="0.0" y="-14.0" />
+      <point x="417.0" y="53.0" />
+      <point x="327.5" y="53.0" />
+      <point x="53.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.deployer.monitor.remote.RemoteInstanceMonitorImpl" target="com.alibaba.otter.canal.deployer.monitor.remote.RemoteInstanceMonitor">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="79.0" y="128.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

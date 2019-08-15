@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.client.adapter.es.ESAdapter</OriginalElement>
+  <nodes>
+    <node x="0.0" y="73.0">com.alibaba.otter.canal.client.adapter.es.monitor.ESConfigMonitor</node>
+    <node x="0.0" y="292.0">com.alibaba.otter.canal.client.adapter.es.support.ESTemplate</node>
+    <node x="211.0" y="73.0">com.alibaba.otter.canal.client.adapter.es.service.ESSyncService</node>
+    <node x="0.0" y="365.0">com.alibaba.otter.canal.client.adapter.es.config.SqlParser</node>
+    <node x="0.0" y="0.0">com.alibaba.otter.canal.client.adapter.es.config.ESSyncConfigLoader</node>
+    <node x="0.0" y="219.0">com.alibaba.otter.canal.client.adapter.es.config.SchemaItem</node>
+    <node x="171.0" y="292.0">com.alibaba.otter.canal.client.adapter.es.ESAdapter</node>
+    <node x="171.0" y="219.0">com.alibaba.otter.canal.client.adapter.es.support.ESSyncUtil</node>
+    <node x="187.0" y="146.0">com.alibaba.otter.canal.client.adapter.es.service.ESEtlService</node>
+    <node x="0.0" y="146.0">com.alibaba.otter.canal.client.adapter.es.config.ESSyncConfig</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="85.5" y="92.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.parse.CanalEventParser</OriginalElement>
+  <nodes>
+    <node x="37.10624999999999" y="78.0">com.alibaba.otter.canal.parse.inbound.group.GroupEventParser</node>
+    <node x="274.0" y="702.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.request.DescribeBackupPolicyRequest</node>
+    <node x="591.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaSnapshotDAO</node>
+    <node x="689.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsBinlogOpenApi</node>
+    <node x="1293.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.ddl.DdlResult</node>
+    <node x="335.390625" y="234.0">com.alibaba.otter.canal.parse.inbound.mysql.LocalBinlogEventParser</node>
+    <node x="183.0" y="624.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.request.AbstractRequest</node>
+    <node x="1141.0" y="624.0">com.alibaba.otter.canal.parse.inbound.BinlogParser</node>
+    <node x="413.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaHistoryDAO</node>
+    <node x="1109.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.MysqlMultiStageCoprocessor</node>
+    <node x="710.0" y="624.0">com.alibaba.otter.canal.parse.inbound.ErosaConnection</node>
+    <node x="822.0" y="551.0">com.alibaba.otter.canal.parse.index.FileMixedLogPositionManager</node>
+    <node x="202.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.MemoryTableMeta</node>
+    <node x="801.0" y="926.0">com.alibaba.otter.canal.parse.inbound.mysql.local.BufferedFileDataInput</node>
+    <node x="0.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.DatabaseTableMeta</node>
+    <node x="242.0" y="551.0">com.alibaba.otter.canal.parse.index.PeriodMixedLogPositionManager</node>
+    <node x="1541.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.dbsync.TableMetaCache</node>
+    <node x="1665.0" y="624.0">com.alibaba.otter.canal.parse.ha.CanalHAController</node>
+    <node x="830.0" y="775.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDBFactory</node>
+    <node x="1463.0" y="624.0">com.alibaba.otter.canal.parse.inbound.HeartBeatCallback</node>
+    <node x="1104.0" y="551.0">com.alibaba.otter.canal.parse.index.MixedLogPositionManager</node>
+    <node x="826.0" y="463.0">com.alibaba.otter.canal.parse.index.AbstractLogPositionManager</node>
+    <node x="815.0" y="702.0">com.alibaba.otter.canal.parse.inbound.mysql.MysqlConnection</node>
+    <node x="235.0" y="999.0">com.alibaba.otter.canal.parse.support.AuthenticationInfo</node>
+    <node x="0.0" y="702.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.request.DescribeBinlogFilesRequest</node>
+    <node x="251.640625" y="0.0">com.alibaba.otter.canal.parse.CanalEventParser</node>
+    <node x="228.53437500000004" y="156.0">com.alibaba.otter.canal.parse.inbound.mysql.AbstractMysqlEventParser</node>
+    <node x="0.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.SlaveEntryPosition</node>
+    <node x="1026.0" y="702.0">com.alibaba.otter.canal.parse.inbound.mysql.dbsync.LogEventConvert</node>
+    <node x="534.0" y="926.0">com.alibaba.otter.canal.parse.inbound.mysql.DbsyncMysqlEventParser</node>
+    <node x="36.0" y="234.0">com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser</node>
+    <node x="601.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.SinkFunction</node>
+    <node x="0.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.ddl.DruidDdlParser</node>
+    <node x="1612.0" y="551.0">com.alibaba.otter.canal.parse.index.FailbackLogPositionManager</node>
+    <node x="802.0" y="853.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.DefaultTableMetaTSDBFactory</node>
+    <node x="959.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.data.BinlogFile</node>
+    <node x="248.53437500000004" y="78.0">com.alibaba.otter.canal.parse.inbound.AbstractEventParser</node>
+    <node x="1408.0" y="775.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.data.DescribeBinlogFileResult</node>
+    <node x="203.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaSnapshotDO</node>
+    <node x="384.140625" y="312.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsLocalBinlogEventParser</node>
+    <node x="540.0" y="551.0">com.alibaba.otter.canal.parse.index.ZooKeeperLogPositionManager</node>
+    <node x="406.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaHistoryDO</node>
+    <node x="516.0" y="775.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaBaseDAO</node>
+    <node x="1119.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.local.BinLogFileQueue</node>
+    <node x="0.0" y="312.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsBinlogEventParserProxy</node>
+    <node x="1456.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.data.RdsItem</node>
+    <node x="838.0" y="385.0">com.alibaba.otter.canal.parse.index.CanalLogPositionManager</node>
+    <node x="0.0" y="926.0">com.alibaba.otter.canal.parse.inbound.EventTransactionBuffer</node>
+    <node x="1354.0" y="551.0">com.alibaba.otter.canal.parse.index.MemoryLogPositionManager</node>
+    <node x="1060.0" y="926.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDBBuilder</node>
+    <node x="788.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.HttpHelper</node>
+    <node x="581.0" y="702.0">com.alibaba.otter.canal.parse.inbound.mysql.LocalBinLogConnection</node>
+    <node x="113.0" y="775.0">com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDB</node>
+    <node x="1129.0" y="775.0">com.alibaba.otter.canal.parse.inbound.MultiStageCoprocessor</node>
+    <node x="1548.0" y="702.0">com.alibaba.otter.canal.parse.ha.HeartBeatHAController</node>
+    <node x="0.0" y="551.0">com.alibaba.otter.canal.parse.index.MetaLogPositionManager</node>
+    <node x="1212.0" y="702.0">com.alibaba.otter.canal.parse.inbound.AbstractBinlogParser</node>
+    <node x="1130.0" y="1072.0">com.alibaba.otter.canal.parse.inbound.TableMeta</node>
+    <node x="267.0" y="926.0">com.alibaba.otter.canal.parse.inbound.ParserExceptionHandler</node>
+    <node x="1311.0" y="926.0">com.alibaba.otter.canal.parse.support.HaAuthenticationInfo</node>
+    <node x="470.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.dbsync.DirectLogFetcher</node>
+    <node x="1330.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.data.RdsBackupPolicy</node>
+    <node x="908.0" y="999.0">com.alibaba.otter.canal.parse.inbound.mysql.ddl.SimpleDdlParser</node>
+    <node x="26.534375000000068" y="156.0">com.alibaba.otter.canal.parse.CanalHASwitchable</node>
+    <node x="1562.0" y="926.0">com.alibaba.otter.canal.parse.inbound.mysql.rds.BinlogDownloadQueue</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.parse.inbound.AbstractEventParser" target="com.alibaba.otter.canal.parse.CanalEventParser">
+      <point x="0.0" y="-14.0" />
+      <point x="347.53437500000007" y="58.0" />
+      <point x="338.640625" y="58.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser" target="com.alibaba.otter.canal.parse.CanalHASwitchable">
+      <point x="0.0" y="-14.0" />
+      <point x="123.0" y="209.0" />
+      <point x="117.53437500000007" y="209.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.MysqlMultiStageCoprocessor" target="com.alibaba.otter.canal.parse.inbound.MultiStageCoprocessor">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.MemoryTableMeta" target="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDB">
+      <point x="0.0" y="-14.0" />
+      <point x="285.0" y="828.0" />
+      <point x="225.5" y="828.0" />
+      <point x="37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.LocalBinlogEventParser" target="com.alibaba.otter.canal.parse.inbound.mysql.AbstractMysqlEventParser">
+      <point x="-55.5" y="-14.0" />
+      <point x="390.890625" y="209.0" />
+      <point x="407.03437500000007" y="209.0" />
+      <point x="59.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.AbstractMysqlEventParser" target="com.alibaba.otter.canal.parse.inbound.AbstractEventParser">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.ha.HeartBeatHAController" target="com.alibaba.otter.canal.parse.ha.CanalHAController">
+      <point x="53.5" y="-14.0" />
+      <point x="1708.5" y="677.0" />
+      <point x="1756.0" y="677.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.LocalBinlogEventParser" target="com.alibaba.otter.canal.parse.CanalEventParser">
+      <point x="55.5" y="-14.0" />
+      <point x="501.890625" y="209.0" />
+      <point x="481.390625" y="209.0" />
+      <point x="481.390625" y="58.0" />
+      <point x="373.440625" y="58.0" />
+      <point x="34.80000000000001" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsBinlogEventParserProxy" target="com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.DatabaseTableMeta" target="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDB">
+      <point x="0.0" y="-14.0" />
+      <point x="91.0" y="828.0" />
+      <point x="150.5" y="828.0" />
+      <point x="-37.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.MysqlConnection" target="com.alibaba.otter.canal.parse.inbound.ErosaConnection">
+      <point x="0.0" y="-14.0" />
+      <point x="898.0" y="677.0" />
+      <point x="834.5" y="677.0" />
+      <point x="41.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.AbstractBinlogParser" target="com.alibaba.otter.canal.parse.inbound.BinlogParser">
+      <point x="0.0" y="-14.0" />
+      <point x="1315.0" y="677.0" />
+      <point x="1247.5" y="677.0" />
+      <point x="35.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser" target="com.alibaba.otter.canal.parse.CanalEventParser">
+      <point x="-58.0" y="-14.0" />
+      <point x="65.0" y="209.0" />
+      <point x="16.034375000000068" y="209.0" />
+      <point x="16.034375000000068" y="48.0" />
+      <point x="269.040625" y="48.0" />
+      <point x="-69.60000000000002" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.FailbackLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="1739.0" y="511.0" />
+      <point x="1061.857142857143" y="511.0" />
+      <point x="108.85714285714289" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.LocalBinLogConnection" target="com.alibaba.otter.canal.parse.inbound.ErosaConnection">
+      <point x="0.0" y="-14.0" />
+      <point x="688.0" y="677.0" />
+      <point x="751.5" y="677.0" />
+      <point x="-41.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser" target="com.alibaba.otter.canal.parse.inbound.mysql.AbstractMysqlEventParser">
+      <point x="58.0" y="-14.0" />
+      <point x="181.0" y="209.0" />
+      <point x="288.03437500000007" y="209.0" />
+      <point x="-59.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.MixedLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="1219.0" y="531.0" />
+      <point x="989.2857142857142" y="531.0" />
+      <point x="36.28571428571422" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaHistoryDAO" target="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaBaseDAO">
+      <point x="0.0" y="-14.0" />
+      <point x="492.0" y="828.0" />
+      <point x="549.5" y="828.0" />
+      <point x="-33.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.DefaultTableMetaTSDBFactory" target="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDBFactory">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaSnapshotDAO" target="com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao.MetaBaseDAO">
+      <point x="0.0" y="-14.0" />
+      <point x="674.0" y="828.0" />
+      <point x="616.5" y="828.0" />
+      <point x="33.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.rds.request.DescribeBackupPolicyRequest" target="com.alibaba.otter.canal.parse.inbound.mysql.rds.request.AbstractRequest">
+      <point x="0.0" y="-14.0" />
+      <point x="405.0" y="677.0" />
+      <point x="307.5" y="677.0" />
+      <point x="41.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.MemoryLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="1473.0" y="521.0" />
+      <point x="1025.5714285714284" y="521.0" />
+      <point x="72.57142857142844" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.PeriodMixedLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="381.0" y="521.0" />
+      <point x="880.4285714285714" y="521.0" />
+      <point x="-72.57142857142856" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsLocalBinlogEventParser" target="com.alibaba.otter.canal.parse.CanalEventParser">
+      <point x="61.5" y="-14.0" />
+      <point x="567.890625" y="48.0" />
+      <point x="408.240625" y="48.0" />
+      <point x="69.60000000000002" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.ha.HeartBeatHAController" target="com.alibaba.otter.canal.parse.inbound.HeartBeatCallback">
+      <point x="-53.5" y="-14.0" />
+      <point x="1601.5" y="677.0" />
+      <point x="1554.0" y="677.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.group.GroupEventParser" target="com.alibaba.otter.canal.parse.CanalEventParser">
+      <point x="0.0" y="-14.0" />
+      <point x="124.10624999999999" y="58.0" />
+      <point x="303.840625" y="58.0" />
+      <point x="-34.80000000000001" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.rds.request.DescribeBinlogFilesRequest" target="com.alibaba.otter.canal.parse.inbound.mysql.rds.request.AbstractRequest">
+      <point x="0.0" y="-14.0" />
+      <point x="127.0" y="677.0" />
+      <point x="224.5" y="677.0" />
+      <point x="-41.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.FileMixedLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.rds.RdsLocalBinlogEventParser" target="com.alibaba.otter.canal.parse.inbound.mysql.LocalBinlogEventParser">
+      <point x="-61.5" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.MetaLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="111.0" y="511.0" />
+      <point x="844.1428571428571" y="511.0" />
+      <point x="-108.85714285714289" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager" target="com.alibaba.otter.canal.parse.index.CanalLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.inbound.mysql.dbsync.LogEventConvert" target="com.alibaba.otter.canal.parse.inbound.BinlogParser">
+      <point x="0.0" y="-14.0" />
+      <point x="1109.0" y="677.0" />
+      <point x="1176.5" y="677.0" />
+      <point x="-35.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.parse.index.ZooKeeperLogPositionManager" target="com.alibaba.otter.canal.parse.index.AbstractLogPositionManager">
+      <point x="0.0" y="-14.0" />
+      <point x="671.0" y="531.0" />
+      <point x="916.7142857142857" y="531.0" />
+      <point x="-36.285714285714334" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="87.0" y="273.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

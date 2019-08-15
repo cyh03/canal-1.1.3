@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.common.CanalMessageSerializer</OriginalElement>
+  <nodes>
+    <node x="0.0" y="375.0">com.alibaba.otter.canal.server.netty.handler.FixedHeaderFrameDecoder</node>
+    <node x="12.0" y="151.0">com.alibaba.otter.canal.spi.CanalMetricsService</node>
+    <node x="267.0" y="448.0">com.alibaba.otter.canal.server.netty.ClientInstanceProfiler</node>
+    <node x="0.0" y="448.0">com.alibaba.otter.canal.common.CanalMessageSerializer</node>
+    <node x="0.0" y="521.0">com.alibaba.otter.canal.spi.CanalMetricsProvider</node>
+    <node x="315.0" y="302.0">com.alibaba.otter.canal.server.netty.handler.ClientAuthenticationHandler</node>
+    <node x="0.0" y="302.0">com.alibaba.otter.canal.server.netty.CanalServerWithNettyProfiler</node>
+    <node x="0.0" y="0.0">com.alibaba.otter.canal.server.CanalService</node>
+    <node x="251.0" y="521.0">com.alibaba.otter.canal.server.CanalServerStarter</node>
+    <node x="0.0" y="229.0">com.alibaba.otter.canal.spi.NopCanalMetricsService</node>
+    <node x="203.0" y="594.0">com.alibaba.otter.canal.server.netty.handler.SessionHandler</node>
+    <node x="486.0" y="521.0">com.alibaba.otter.canal.spi.CanalMQProducer</node>
+    <node x="263.5" y="78.0">com.alibaba.otter.canal.server.netty.CanalServerWithNetty</node>
+    <node x="13.5" y="78.0">com.alibaba.otter.canal.server.embedded.CanalServerWithEmbedded</node>
+    <node x="267.0" y="151.0">com.alibaba.otter.canal.server.netty.handler.HandshakeInitializationHandler</node>
+    <node x="275.0" y="375.0">com.alibaba.otter.canal.server.netty.listener.ChannelFutureAggregator</node>
+    <node x="406.0" y="594.0">com.alibaba.otter.canal.common.MQProperties</node>
+    <node x="0.0" y="667.0">com.alibaba.otter.canal.server.netty.NettyUtils</node>
+    <node x="266.0" y="0.0">com.alibaba.otter.canal.server.CanalServer</node>
+    <node x="0.0" y="594.0">com.alibaba.otter.canal.common.MQMessageUtils</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.server.embedded.CanalServerWithEmbedded" target="com.alibaba.otter.canal.server.CanalService">
+      <point x="-57.5" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.server.embedded.CanalServerWithEmbedded" target="com.alibaba.otter.canal.server.CanalServer">
+      <point x="57.5" y="-14.0" />
+      <point x="186.0" y="53.0" />
+      <point x="299.5" y="53.0" />
+      <point x="-33.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.spi.NopCanalMetricsService" target="com.alibaba.otter.canal.spi.CanalMetricsService">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.server.netty.CanalServerWithNetty" target="com.alibaba.otter.canal.server.CanalServer">
+      <point x="0.0" y="-14.0" />
+      <point x="33.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="111.0" y="260.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

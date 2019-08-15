@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.alibaba.otter.canal.store.AbstractCanalGroupStore</OriginalElement>
+  <nodes>
+    <node x="139.0" y="453.0">com.alibaba.otter.canal.store.model.Event</node>
+    <node x="73.5" y="78.0">com.alibaba.otter.canal.store.CanalEventStore</node>
+    <node x="12.0" y="156.0">com.alibaba.otter.canal.store.CanalGroupEventStore</node>
+    <node x="0.0" y="307.0">com.alibaba.otter.canal.store.CanalStoreException</node>
+    <node x="0.0" y="380.0">com.alibaba.otter.canal.store.helper.CanalEventUtils</node>
+    <node x="291.5" y="0.0">com.alibaba.otter.canal.store.CanalStoreScavenge</node>
+    <node x="374.0" y="380.0">com.alibaba.otter.canal.store.model.BatchMode</node>
+    <node x="275.17857142857144" y="156.0">com.alibaba.otter.canal.store.memory.MemoryEventStoreWithBuffer</node>
+    <node x="259.5" y="78.0">com.alibaba.otter.canal.store.AbstractCanalStoreScavenge</node>
+    <node x="0.0" y="453.0">com.alibaba.otter.canal.store.model.Events</node>
+    <node x="243.0" y="307.0">com.alibaba.otter.canal.store.CanalStoreConstants</node>
+    <node x="211.0" y="380.0">com.alibaba.otter.canal.store.StoreInfo</node>
+    <node x="0.0" y="234.0">com.alibaba.otter.canal.store.AbstractCanalGroupStore</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.alibaba.otter.canal.store.memory.MemoryEventStoreWithBuffer" target="com.alibaba.otter.canal.store.CanalEventStore">
+      <point x="-84.66666666666669" y="-14.0" />
+      <point x="317.51190476190476" y="131.0" />
+      <point x="198.0" y="131.0" />
+      <point x="41.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.AbstractCanalStoreScavenge" target="com.alibaba.otter.canal.store.CanalStoreScavenge">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.memory.MemoryEventStoreWithBuffer" target="com.alibaba.otter.canal.store.CanalStoreScavenge">
+      <point x="84.6666666666667" y="-14.0" />
+      <point x="486.84523809523813" y="131.0" />
+      <point x="524.0" y="131.0" />
+      <point x="524.0" y="53.0" />
+      <point x="449.83333333333337" y="53.0" />
+      <point x="63.333333333333385" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.memory.MemoryEventStoreWithBuffer" target="com.alibaba.otter.canal.store.AbstractCanalStoreScavenge">
+      <point x="0.0" y="-14.0" />
+      <point x="402.17857142857144" y="131.0" />
+      <point x="386.5" y="131.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.CanalEventStore" target="com.alibaba.otter.canal.store.CanalStoreScavenge">
+      <point x="0.0" y="-14.0" />
+      <point x="156.5" y="53.0" />
+      <point x="323.1666666666667" y="53.0" />
+      <point x="-63.333333333333314" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.AbstractCanalGroupStore" target="com.alibaba.otter.canal.store.CanalGroupEventStore">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.store.CanalGroupEventStore" target="com.alibaba.otter.canal.store.CanalEventStore">
+      <point x="0.0" y="-14.0" />
+      <point x="-41.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="231.0" y="131.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
