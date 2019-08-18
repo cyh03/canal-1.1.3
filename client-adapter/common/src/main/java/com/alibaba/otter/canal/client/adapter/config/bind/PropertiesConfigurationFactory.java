@@ -25,7 +25,7 @@ import com.alibaba.otter.canal.client.adapter.config.common.PropertySources;
  * Validate some {@link Properties} (or optionally
  * {@link org.springframework.core.env.PropertySources}) by binding them to an
  * object of a specified type and then optionally running a {@link Validator}
- * over it.
+ * over it.通过将某些属性绑定到指定类型的对象，然后在其上运行一个验证器，从而验证某些属性(或可选的org.springframework.core.env.PropertySources)。
  *
  * @param <T> the target type
  * @author Dave Syer
@@ -90,7 +90,7 @@ public class PropertiesConfigurationFactory<T> implements FactoryBean<T>, Applic
     /**
      * Flag to disable binding of nested properties (i.e. those with period
      * separators in their paths). Can be useful to disable this if the name prefix
-     * is empty and you don't want to ignore unknown fields.
+     * is empty and you don't want to ignore unknown fields.标记，以禁用嵌套属性的绑定(即路径中有分隔符的属性)。如果名称前缀为空，并且不想忽略未知字段，则禁用此选项将非常有用。
      *
      * @param ignoreNestedProperties the flag to set (default false)
      */
@@ -103,7 +103,8 @@ public class PropertiesConfigurationFactory<T> implements FactoryBean<T>, Applic
      * parameters that do not have corresponding fields in the target object.
      * <p>
      * Default is "true". Turn this off to enforce that all bind parameters must
-     * have a matching field in the target object.
+     * have a matching field in the target object.设置是否忽略未知字段，即是否忽略目标对象中没有对应字段的绑定参数。
+     * 默认设置是“真实的”。关闭此选项以强制所有绑定参数必须在目标对象中具有匹配字段。
      *
      * @param ignoreUnknownFields if unknown fields should be ignored
      */
@@ -117,7 +118,8 @@ public class PropertiesConfigurationFactory<T> implements FactoryBean<T>, Applic
      * accessible (for example because of null values in the nested path).
      * <p>
      * Default is "false". Turn this on to ignore bind parameters for nested objects
-     * in non-existing parts of the target object graph.
+     * in non-existing parts of the target object graph.设置是否忽略无效字段，即是否忽略目标对象中具有不可访问的对应字段的绑定参数(例如，由于嵌套路径中的null值)。
+     * 默认设置是“假”。打开此选项可忽略目标对象图中不存在部分中的嵌套对象的绑定参数。
      *
      * @param ignoreInvalidFields if invalid fields should be ignored
      */

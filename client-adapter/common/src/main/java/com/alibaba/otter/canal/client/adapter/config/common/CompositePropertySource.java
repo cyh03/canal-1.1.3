@@ -13,7 +13,8 @@ import org.springframework.util.StringUtils;
  * As of Spring 4.1.2, this class extends {@link EnumerablePropertySource}
  * instead of plain {@link PropertySource}, exposing {@link #getPropertyNames()}
  * based on the accumulated property names from all contained sources (as far as
- * possible).
+ * possible).在一组PropertySource实例上迭代的复合PropertySource实现。在多个属性源共享相同名称的情况下是必要的，例如当多个值被提供给@PropertySource时。
+ * 从Spring 4.1.2开始，这个类扩展了EnumerablePropertySource而不是普通的PropertySource，根据所有包含源的累积属性名(尽可能多)公开getPropertyNames()。
  *
  * @author Chris Beams
  * @author Juergen Hoeller

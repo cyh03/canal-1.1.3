@@ -17,7 +17,8 @@ import org.springframework.util.ResourceUtils;
  * <p>
  * The "exists" method will check whether a File or InputStream can be opened;
  * "isOpen" will always return false; "getURL" and "getFile" throw an exception;
- * and "toString" will return the description.
+ * and "toString" will return the description.方便的资源实现基类，预实现典型的行为。
+ * “exists”方法将检查是否可以打开文件或InputStream;“isOpen”总是返回false;“getURL”和“getFile”抛出异常;“toString”将返回描述。
  *
  * @author Juergen Hoeller
  * @since 28.12.2003
@@ -27,7 +28,7 @@ public abstract class AbstractResource implements Resource {
     /**
      * This implementation checks whether a File can be opened, falling back to
      * whether an InputStream can be opened. This will cover both directories and
-     * content resources.
+     * content resources.这个实现检查是否可以打开文件，返回到是否可以打开InputStream。这将涵盖目录和内容资源。
      */
     @Override
     public boolean exists() {

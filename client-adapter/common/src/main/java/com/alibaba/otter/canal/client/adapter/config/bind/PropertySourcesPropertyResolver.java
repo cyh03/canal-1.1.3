@@ -129,7 +129,8 @@ public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
      * The default implementation writes a debug log message with key and source. As
      * of 4.3.3, this does not log the value anymore in order to avoid accidental
      * logging of sensitive settings. Subclasses may override this method to change
-     * the log level and/or log message, including the property's value if desired.
+     * the log level and/or log message, including the property's value if desired.在给定的PropertySource中找到给定的键，并将其记录为给定的值。
+     * 默认实现使用密钥和源代码编写调试日志消息。从4.3.3开始，这不再记录值，以避免意外记录敏感设置。子类可以覆盖此方法来更改日志级别和/或日志消息，如果需要，还可以更改属性的值。
      *
      * @param key the key found
      * @param propertySource the {@code PropertySource} that the key has been found

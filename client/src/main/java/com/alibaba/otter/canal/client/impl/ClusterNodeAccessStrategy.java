@@ -22,6 +22,7 @@ import com.alibaba.otter.canal.common.zookeeper.running.ServerRunningData;
  * @author jianghang 2012-12-3 下午10:01:04
  * @version 1.0.0
  */
+//
 public class ClusterNodeAccessStrategy implements CanalNodeAccessStrategy {
 
     private String                           destination;
@@ -54,12 +55,18 @@ public class ClusterNodeAccessStrategy implements CanalNodeAccessStrategy {
 
         };
 
+//        获取zk canal节点路径
         String clusterPath = ZookeeperPathUtils.getDestinationClusterRoot(destination);
+//        订阅canal zk节点变化
         this.zkClient.subscribeChildChanges(clusterPath, childListener);
+//        初始化canal集群节点
         initClusters(this.zkClient.getChildren(clusterPath));
 
+//        获取运行的canal zk节点路径
         String runningPath = ZookeeperPathUtils.getDestinationServerRunning(destination);
+//        订阅运行的canal zk节点变化
         this.zkClient.subscribeDataChanges(runningPath, dataListener);
+//        初始化运行的canal节点地址
         initRunning(this.zkClient.readData(runningPath, true));
     }
 
@@ -68,6 +75,7 @@ public class ClusterNodeAccessStrategy implements CanalNodeAccessStrategy {
         return nextNode();
     }
 
+//
     public SocketAddress nextNode() {
         if (runningAddress != null) {// 如果服务已经启动，直接选择当前正在工作的节点
             return runningAddress;
@@ -78,6 +86,7 @@ public class ClusterNodeAccessStrategy implements CanalNodeAccessStrategy {
         }
     }
 
+//
     private void initClusters(List<String> currentChilds) {
         if (currentChilds == null || currentChilds.isEmpty()) {
             currentAddress = new ArrayList<InetSocketAddress>();
@@ -90,11 +99,13 @@ public class ClusterNodeAccessStrategy implements CanalNodeAccessStrategy {
                 }
             }
 
+//            打乱集合中元素顺序，get(0)获取的元素就是随机的
             Collections.shuffle(addresses);
             currentAddress = addresses;// 直接切换引用
         }
     }
 
+//
     private void initRunning(Object data) {
         if (data == null) {
             return;

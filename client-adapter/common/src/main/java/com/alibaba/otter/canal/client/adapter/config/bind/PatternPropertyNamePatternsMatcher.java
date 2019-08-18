@@ -11,6 +11,7 @@ import org.springframework.util.PatternMatchUtils;
  * @author Phillip Webb
  * @since 1.2.0
  */
+// 实现接口的方式适配器模式实现
 class PatternPropertyNamePatternsMatcher implements PropertyNamePatternsMatcher {
 
     private final String[] patterns;

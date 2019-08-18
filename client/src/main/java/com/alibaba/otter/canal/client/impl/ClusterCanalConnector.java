@@ -17,6 +17,7 @@ import com.alibaba.otter.canal.protocol.exception.CanalClientException;
  * @author jianghang 2012-10-29 下午08:04:06
  * @version 1.0.0
  */
+//
 public class ClusterCanalConnector implements CanalConnector {
 
     private final Logger            logger        = LoggerFactory.getLogger(this.getClass());
@@ -39,6 +40,7 @@ public class ClusterCanalConnector implements CanalConnector {
         this.accessStrategy = accessStrategy;
     }
 
+//
     public void connect() throws CanalClientException {
         while (currentConnector == null) {
             int times = 0;
@@ -89,6 +91,7 @@ public class ClusterCanalConnector implements CanalConnector {
         return currentConnector != null && currentConnector.checkValid();
     }
 
+//
     public void disconnect() throws CanalClientException {
         if (currentConnector != null) {
             currentConnector.disconnect();
@@ -100,6 +103,7 @@ public class ClusterCanalConnector implements CanalConnector {
         subscribe(""); // 传递空字符即可
     }
 
+//
     public void subscribe(String filter) throws CanalClientException {
         int times = 0;
         while (times < retryTimes) {
@@ -263,6 +267,7 @@ public class ClusterCanalConnector implements CanalConnector {
         throw new CanalClientException("failed to ack after " + times + " times retry");
     }
 
+//
     private void restart() throws CanalClientException {
         disconnect();
         try {

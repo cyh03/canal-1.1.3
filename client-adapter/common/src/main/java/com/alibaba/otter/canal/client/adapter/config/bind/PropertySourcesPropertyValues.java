@@ -21,7 +21,7 @@ import com.alibaba.otter.canal.client.adapter.config.common.PropertySources;
 /**
  * A {@link PropertyValues} implementation backed by a {@link PropertySources},
  * bridging the two abstractions and allowing (for instance) a regular
- * {@link DataBinder} to be used with the latter.
+ * {@link DataBinder} to be used with the latter.由PropertySources支持的PropertyValues实现，它桥接两个抽象，并允许(例如)与后者一起使用常规DataBinder。
  *
  * @author Dave Syer
  * @author Phillip Webb

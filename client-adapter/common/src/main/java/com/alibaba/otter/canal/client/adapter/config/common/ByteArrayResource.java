@@ -17,7 +17,9 @@ import org.springframework.util.Assert;
  * Useful for loading content from any given byte array, without having to
  * resort to a single-use {@link InputStreamResource}. Particularly useful for
  * creating mail attachments from local content, where JavaMail needs to be able
- * to read the stream multiple times.
+ * to read the stream multiple times.给定字节数组的资源实现。
+ * 为给定的字节数组创建ByteArrayInputStream。
+ * 用于从任何给定的字节数组加载内容，而不必求助于单一使用的InputStreamResource。对于从本地内容创建邮件附件特别有用，因为JavaMail需要能够多次读取流。
  *
  * @author Juergen Hoeller
  * @author Sam Brannen

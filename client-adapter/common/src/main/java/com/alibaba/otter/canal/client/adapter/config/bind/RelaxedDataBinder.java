@@ -19,7 +19,7 @@ import org.springframework.validation.DataBinder;
 /**
  * Binder implementation that allows caller to bind to maps and also allows
  * property names to match a bit loosely (if underscores or dashes are removed
- * and replaced with camel case for example).
+ * and replaced with camel case for example).绑定器实现，允许调用者绑定到映射，还允许属性名称稍微松散地匹配(例如，如果下划线或破折号被删除并用驼峰大小写替换)。
  *
  * @author Dave Syer
  * @author Phillip Webb
@@ -75,7 +75,7 @@ public class RelaxedDataBinder extends DataBinder {
     /**
      * Flag to disable binding of nested properties (i.e. those with period
      * separators in their paths). Can be useful to disable this if the name prefix
-     * is empty and you don't want to ignore unknown fields.
+     * is empty and you don't want to ignore unknown fields.标记，以禁用嵌套属性的绑定(即路径中有分隔符的属性)。如果名称前缀为空，并且不想忽略未知字段，则禁用此选项将非常有用。
      *
      * @param ignoreNestedProperties the flag to set (default false)
      */

@@ -47,6 +47,7 @@ import com.google.protobuf.ByteString;
  * @author jianghang 2012-10-24 下午05:37:20
  * @version 1.0.0
  */
+//
 public class SimpleCanalConnector implements CanalConnector {
 
     private static final Logger  logger                = LoggerFactory.getLogger(SimpleCanalConnector.class);
@@ -96,11 +97,13 @@ public class SimpleCanalConnector implements CanalConnector {
         this.clientIdentity = new ClientIdentity(destination, (short) 1001);
     }
 
+//
     public void connect() throws CanalClientException {
         if (connected) {
             return;
         }
 
+//        client监听器启动
         if (runningMonitor != null) {
             if (!runningMonitor.isStart()) {
                 runningMonitor.start();
@@ -122,6 +125,7 @@ public class SimpleCanalConnector implements CanalConnector {
         connected = true;
     }
 
+//
     public void disconnect() throws CanalClientException {
         if (rollbackOnDisConnect && channel.isConnected()) {
             rollback();
@@ -137,6 +141,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private InetSocketAddress doConnect() throws CanalClientException {
         try {
             channel = SocketChannel.open();
@@ -190,6 +195,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private void doDisconnect() throws CanalClientException {
         if (readableChannel != null) {
             quietlyClose(readableChannel);
@@ -205,6 +211,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private void quietlyClose(Channel channel) {
         try {
             channel.close();
@@ -217,6 +224,7 @@ public class SimpleCanalConnector implements CanalConnector {
         subscribe(""); // 传递空字符即可
     }
 
+//
     public void subscribe(String filter) throws CanalClientException {
         waitClientRunning();
         if (!running) {
@@ -276,16 +284,19 @@ public class SimpleCanalConnector implements CanalConnector {
         return get(batchSize, null, null);
     }
 
+//
     public Message get(int batchSize, Long timeout, TimeUnit unit) throws CanalClientException {
         Message message = getWithoutAck(batchSize, timeout, unit);
         ack(message.getId());
         return message;
     }
 
+//
     public Message getWithoutAck(int batchSize) throws CanalClientException {
         return getWithoutAck(batchSize, null, null);
     }
 
+//
     public Message getWithoutAck(int batchSize, Long timeout, TimeUnit unit) throws CanalClientException {
         waitClientRunning();
         if (!running) {
@@ -322,6 +333,7 @@ public class SimpleCanalConnector implements CanalConnector {
         return CanalMessageDeserializer.deserializer(data, lazyParseEntry);
     }
 
+//
     public void ack(long batchId) throws CanalClientException {
         waitClientRunning();
         if (!running) {
@@ -343,6 +355,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     public void rollback(long batchId) throws CanalClientException {
         waitClientRunning();
         ClientRollback ca = ClientRollback.newBuilder()
@@ -361,9 +374,10 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     public void rollback() throws CanalClientException {
         waitClientRunning();
-        rollback(0);// 0代笔未设置
+        rollback(0);// 0代表未设置
     }
 
     // ==================== helper method ====================
@@ -372,10 +386,12 @@ public class SimpleCanalConnector implements CanalConnector {
         writeWithHeader(writableChannel, body);
     }
 
+//
     private byte[] readNextPacket() throws IOException {
         return readNextPacket(readableChannel);
     }
 
+//
     private void writeWithHeader(WritableByteChannel channel, byte[] body) throws IOException {
         synchronized (writeDataLock) {
             writeHeader.clear();
@@ -386,6 +402,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private byte[] readNextPacket(ReadableByteChannel channel) throws IOException {
         synchronized (readDataLock) {
             readHeader.clear();
@@ -397,6 +414,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private void read(ReadableByteChannel channel, ByteBuffer buffer) throws IOException {
         while (buffer.hasRemaining()) {
             int r = channel.read(buffer);
@@ -412,6 +430,7 @@ public class SimpleCanalConnector implements CanalConnector {
             clientData.setClientId(clientIdentity.getClientId());
             clientData.setAddress(AddressUtils.getHostIp());
 
+//            创建client运行监听器
             runningMonitor = new ClientRunningMonitor();
             runningMonitor.setDestination(clientIdentity.getDestination());
             runningMonitor.setZkClient(zkClientx);
@@ -441,6 +460,7 @@ public class SimpleCanalConnector implements CanalConnector {
         }
     }
 
+//
     private void waitClientRunning() {
         try {
             if (zkClientx != null) {

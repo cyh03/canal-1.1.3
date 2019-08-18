@@ -8,6 +8,7 @@ import java.net.SocketAddress;
  * @author jianghang 2012-10-29 下午07:55:41
  * @version 1.0.0
  */
+//
 public interface CanalNodeAccessStrategy {
 
     SocketAddress currentNode();

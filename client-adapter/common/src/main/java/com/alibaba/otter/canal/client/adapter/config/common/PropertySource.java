@@ -31,7 +31,10 @@ import org.springframework.util.ObjectUtils;
  * with @{@link org.springframework.context.annotation.Configuration
  * Configuration} classes that the @{@link PropertySource PropertySource}
  * annotation provides a convenient and declarative way of adding property
- * sources to the enclosing {@code Environment}.
+ * sources to the enclosing {@code Environment}.表示名称/值属性对的源的抽象基类。底层源对象可以是封装属性的任何类型的T。例子包括java.util。属性对象,java.util。映射对象、ServletContext和ServletConfig对象(用于访问初始化参数)。研究PropertySource类型层次结构，查看提供的实现。
+ * PropertySource对象通常不是单独使用的，而是通过PropertySources对象使用的，该对象聚合属性源，并与PropertyResolver实现结合使用，后者可以跨一组PropertySources执行基于先例的搜索。
+ * PropertySource标识不是根据封装属性的内容确定的，而是仅根据PropertySource的名称确定的。这对于在集合上下文中操作PropertySource对象非常有用。有关详细信息，请参见MutablePropertySources中的操作以及named(String)和toString()方法。
+ * 注意，当使用@Configuration类时，@PropertySource注释提供了一种方便且声明性的方法，可以将属性源添加到封闭的环境中。
  *
  * @author Chris Beams
  * @since 3.1
@@ -62,7 +65,8 @@ public abstract class PropertySource<T> {
      * {@code Object} instance as the underlying source.
      * <p>
      * Often useful in testing scenarios when creating anonymous implementations
-     * that never query an actual source but rather return hard-coded values.
+     * that never query an actual source but rather return hard-coded values.创建一个新的PropertySource，使用给定的名称和一个新的对象实例作为基础源。
+     * 在创建从不查询实际源而是返回硬编码值的匿名实现时，在测试场景中通常很有用。
      */
     @SuppressWarnings("unchecked")
     public PropertySource(String name){
@@ -77,7 +81,7 @@ public abstract class PropertySource<T> {
     }
 
     /**
-     * Return the underlying source object for this {@code PropertySource}.
+     * Return the underlying source object for this {@code PropertySource}.返回此属性源的基础源对象。
      */
     public T getSource() {
         return this.source;
@@ -88,7 +92,8 @@ public abstract class PropertySource<T> {
      * <p>
      * This implementation simply checks for a {@code null} return value from
      * {@link #getProperty(String)}. Subclasses may wish to implement a more
-     * efficient algorithm if possible.
+     * efficient algorithm if possible.返回此PropertySource是否包含给定名称。
+     * 这个实现只是检查getProperty(String)的空返回值。子类可能希望实现更有效的算法。
      *
      * @param name the property name to find
      */
@@ -98,7 +103,7 @@ public abstract class PropertySource<T> {
 
     /**
      * Return the value associated with the given name, or {@code null} if not
-     * found.
+     * found.返回与给定名称关联的值，如果没有找到，则返回null。
      *
      * @param name the property to find
      */
@@ -173,7 +178,10 @@ public abstract class PropertySource<T> {
      * The returned {@code PropertySource} will throw
      * {@code UnsupportedOperationException} if any methods other than
      * {@code equals(Object)}, {@code hashCode()}, and {@code toString()} are
-     * called.
+     * called.Return a PropertySource implementation intended for collection comparison purposes only.
+     * The returned PropertySource will throw UnsupportedOperationException if any methods other than equals(Object), hashCode(), and toString() are called.
+     * 返回仅用于集合比较目的的PropertySource实现。
+     * 如果调用了除equals(Object)、hashCode()和toString()之外的任何方法，返回的PropertySource将抛出UnsupportedOperationException。返回仅用于集合比较目的的PropertySource实现。如果调用了除equals(Object)、hashCode()和toString()之外的任何方法，返回的PropertySource将抛出UnsupportedOperationException。
      *
      * @param name the name of the comparison {@code PropertySource} to be created
      *     and returned.
@@ -189,7 +197,7 @@ public abstract class PropertySource<T> {
      * until the {@code ServletContext} object is available to its enclosing
      * {@code ApplicationContext}. In such cases, a stub should be used to hold the
      * intended default position/order of the property source, then be replaced
-     * during context refresh.
+     * during context refresh.在实际属性源不能在应用程序上下文创建时立即初始化的情况下用作占位符。例如，基于ServletContext的属性源必须等待，直到ServletContext对象对其封装的ApplicationContext可用。在这种情况下，应该使用存根来保存属性源的默认位置/顺序，然后在上下文刷新期间替换存根。
      *
      * @see org.springframework.web.context.support.StandardServletEnvironment
      * @see org.springframework.web.context.support.ServletContextPropertySource

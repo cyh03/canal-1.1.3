@@ -12,7 +12,7 @@ import org.springframework.util.StringUtils;
  * "spring.profiles" element as a comma-separated list of Spring profile names,
  * optionally negated using the {@code !} character. If both negated and
  * non-negated profiles are specified for a single document, at least one
- * non-negated profile must match and no negated profiles may match.
+ * non-negated profile must match and no negated profiles may match.YamlProcessor。由Environment.getActiveProfiles()支持的DocumentMatcher。YAML文档可以定义一个“spring”。元素作为以逗号分隔的Spring配置文件名称列表，可选使用!的性格。如果为单个文档指定了否定的和非否定的概要文件，则必须至少匹配一个非否定的概要文件，并且不能匹配任何否定的概要文件。
  *
  * @author Dave Syer
  * @author Matt Benson

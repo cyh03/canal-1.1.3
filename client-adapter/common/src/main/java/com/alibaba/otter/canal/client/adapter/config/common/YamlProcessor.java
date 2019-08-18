@@ -102,7 +102,7 @@ public abstract class YamlProcessor {
      * matchers}. If a document matches it is passed into the callback, along with
      * its representation as Properties. Depending on the
      * {@link #setResolutionMethod(ResolutionMethod)} not all of the documents will
-     * be parsed.
+     * be parsed.提供一个子类处理从提供的资源中解析的Yaml的机会。每个资源依次被解析，其中的文档根据匹配器进行检查。如果文档匹配，则将其连同作为属性的表示形式传递给回调函数。根据setResolutionMethod(YamlProcessor.ResolutionMethod)，并不是所有的文档都将被解析。
      *
      * @param callback a callback to delegate to once matching documents are found
      * @see #createYaml()

@@ -19,7 +19,8 @@ import org.springframework.util.ObjectUtils;
  * to the nature of JNDI it is not possible to determine all possible property
  * names at any given time; rather it is only possible to try to access a
  * property (via {@link #getProperty(String)}) in order to evaluate whether it
- * is present or not.
+ * is present or not.一种PropertySource实现，能够询问其底层源对象，以枚举所有可能的属性名称/值对。公开getPropertyNames()方法，以允许调用者在不访问底层源对象的情况下内省可用属性。这还促进了containsProperty(String)的更有效实现，因为它可以调用getPropertyNames()并遍历返回的数组，而不是尝试调用getProperty(String)，后者可能更昂贵。实现可以考虑缓存getPropertyNames()的结果，以充分利用这个性能机会。
+ * 大多数框架提供的PropertySource实现都是可枚举的;一个反例是JndiPropertySource，由于JNDI的性质，不可能在任何给定时间确定所有可能的属性名称;相反，只有尝试访问一个属性(通过getProperty(String))才能评估它是否存在。
  *
  * @author Chris Beams
  * @author Juergen Hoeller

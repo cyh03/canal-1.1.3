@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.protocol.Message;
 import com.alibaba.otter.canal.protocol.exception.CanalClientException;
 import com.google.protobuf.ByteString;
 
+//
 public class CanalMessageDeserializer {
 
     public static Message deserializer(byte[] data) {

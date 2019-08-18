@@ -15,6 +15,7 @@ import com.alibaba.otter.canal.common.zookeeper.ZkClientx;
  * @author jianghang 2012-10-29 下午11:18:50
  * @version 1.0.0
  */
+//
 public class CanalConnectors {
 
     /**

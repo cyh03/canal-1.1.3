@@ -17,7 +17,8 @@ import org.springframework.core.env.PropertySourcesPropertyResolver;
  * Where <em>precedence</em> is mentioned in methods such as {@link #addFirst}
  * and {@link #addLast}, this is with regard to the order in which property
  * sources will be searched when resolving a given property with a
- * {@link PropertyResolver}.
+ * {@link PropertyResolver}.PropertySources接口的默认实现。允许对包含的属性源进行操作，并提供用于复制现有属性源实例的构造函数。
+ * 在addFirst和addLast等方法中提到优先级时，这与使用PropertyResolver解析给定属性时搜索属性源的顺序有关。
  *
  * @author Chris Beams
  * @author Juergen Hoeller

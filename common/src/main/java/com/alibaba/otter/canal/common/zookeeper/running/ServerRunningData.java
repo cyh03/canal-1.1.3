@@ -12,6 +12,7 @@ import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
  * @author jianghang 2012-11-22 下午03:11:30
  * @version 1.0.0
  */
+//
 public class ServerRunningData implements Serializable {
 
     private static final long serialVersionUID = 92260481691855281L;
