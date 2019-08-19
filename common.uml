@@ -2,10 +2,60 @@
 <Diagram>
   <ID>JAVA</ID>
   <OriginalElement>com.alibaba.otter.canal.common.AbstractCanalLifeCycle</OriginalElement>
-  <nodes />
+  <nodes>
+    <node x="0.0" y="521.0">com.alibaba.otter.canal.common.utils.CommonUtils</node>
+    <node x="0.0" y="375.0">com.alibaba.otter.canal.common.zookeeper.running.ServerRunningData</node>
+    <node x="289.5" y="78.0">com.alibaba.otter.canal.common.alarm.CanalAlarmHandler</node>
+    <node x="0.0" y="448.0">com.alibaba.otter.canal.common.zookeeper.ByteSerializer</node>
+    <node x="470.0" y="302.0">com.alibaba.otter.canal.common.zookeeper.ZookeeperPathUtils</node>
+    <node x="235.0" y="302.0">com.alibaba.otter.canal.common.utils.NamedThreadFactory</node>
+    <node x="0.0" y="229.0">com.alibaba.otter.canal.common.zookeeper.running.ServerRunningListener</node>
+    <node x="163.0" y="594.0">com.alibaba.otter.canal.common.utils.UriUtils</node>
+    <node x="190.50000000000003" y="0.0">com.alibaba.otter.canal.common.CanalLifeCycle</node>
+    <node x="350.0" y="521.0">com.google.common.collect.MigrateMap</node>
+    <node x="227.0" y="375.0">com.alibaba.otter.canal.common.zookeeper.StringSerializer</node>
+    <node x="446.0" y="375.0">com.alibaba.otter.canal.common.CanalException</node>
+    <node x="259.0" y="229.0">com.alibaba.otter.canal.common.zookeeper.running.ServerRunningMonitors</node>
+    <node x="179.0" y="521.0">com.alibaba.otter.canal.common.zookeeper.ZooKeeperx</node>
+    <node x="0.0" y="594.0">com.alibaba.otter.canal.common.zookeeper.ZkClientx</node>
+    <node x="0.0" y="302.0">com.alibaba.otter.canal.common.utils.CanalToStringStyle</node>
+    <node x="256.0" y="156.0">com.alibaba.otter.canal.common.alarm.LogAlarmHandler</node>
+    <node x="521.0" y="521.0">com.alibaba.otter.canal.common.utils.JsonUtils</node>
+    <node x="0.0" y="156.0">com.alibaba.otter.canal.common.zookeeper.running.ServerRunningMonitor</node>
+    <node x="203.0" y="448.0">com.alibaba.otter.canal.common.utils.AddressUtils</node>
+    <node x="47.5" y="78.0">com.alibaba.otter.canal.common.AbstractCanalLifeCycle</node>
+    <node x="390.0" y="448.0">com.alibaba.otter.canal.common.utils.BooleanMutex</node>
+  </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="695.0" y="455.0" />
+  <edges>
+    <edge source="com.alibaba.otter.canal.common.zookeeper.running.ServerRunningMonitor" target="com.alibaba.otter.canal.common.AbstractCanalLifeCycle">
+      <point x="0.0" y="-14.0" />
+      <point x="-55.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.common.alarm.LogAlarmHandler" target="com.alibaba.otter.canal.common.alarm.CanalAlarmHandler">
+      <point x="41.5" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.common.alarm.LogAlarmHandler" target="com.alibaba.otter.canal.common.AbstractCanalLifeCycle">
+      <point x="-41.5" y="-14.0" />
+      <point x="297.5" y="131.0" />
+      <point x="214.0" y="131.0" />
+      <point x="55.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.common.AbstractCanalLifeCycle" target="com.alibaba.otter.canal.common.CanalLifeCycle">
+      <point x="0.0" y="-14.0" />
+      <point x="158.5" y="53.0" />
+      <point x="230.00000000000003" y="53.0" />
+      <point x="-39.5" y="14.0" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.common.alarm.CanalAlarmHandler" target="com.alibaba.otter.canal.common.CanalLifeCycle">
+      <point x="0.0" y="-14.0" />
+      <point x="380.5" y="53.0" />
+      <point x="309.0" y="53.0" />
+      <point x="39.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="695.0" y="435.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
