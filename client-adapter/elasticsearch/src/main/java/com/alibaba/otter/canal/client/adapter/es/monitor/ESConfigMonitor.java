@@ -43,6 +43,7 @@ public class ESConfigMonitor {
         try {
             FileAlterationObserver observer = new FileAlterationObserver(confDir,
                 FileFilterUtils.and(FileFilterUtils.fileFileFilter(), FileFilterUtils.suffixFileFilter("yml")));
+//            文件变化监听采用的common io的类库
             FileListener listener = new FileListener();
             observer.addListener(listener);
             fileMonitor = new FileAlterationMonitor(3000, observer);
