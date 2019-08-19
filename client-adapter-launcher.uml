@@ -3,28 +3,26 @@
   <ID>JAVA</ID>
   <OriginalElement>com.alibaba.otter.canal.adapter.launcher.CanalAdapterApplication</OriginalElement>
   <nodes>
-    <node x="195.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.config.CuratorClient</node>
-    <node x="0.0" y="78.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterRocketMQWorker</node>
+    <node x="470.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.config.CuratorClient</node>
     <node x="318.0" y="594.0">com.alibaba.otter.canal.adapter.launcher.common.Mode</node>
-    <node x="291.0" y="151.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteConfigLoader</node>
-    <node x="478.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterLoader</node>
-    <node x="484.0" y="78.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterKafkaWorker</node>
-    <node x="561.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.ConfigItem</node>
-    <node x="16.0" y="151.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteAdapterMonitor</node>
-    <node x="0.0" y="229.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteAdapterMonitorImpl</node>
-    <node x="0.0" y="375.0">com.alibaba.otter.canal.adapter.launcher.CanalAdapterApplication</node>
-    <node x="291.0" y="302.0">com.alibaba.otter.canal.adapter.launcher.monitor.ApplicationConfigMonitor</node>
-    <node x="274.0" y="78.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterWorker</node>
+    <node x="8.0" y="151.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteConfigLoader</node>
+    <node x="0.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterLoader</node>
+    <node x="299.0" y="78.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteAdapterMonitorImpl</node>
+    <node x="195.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.ConfigItem</node>
+    <node x="315.0" y="0.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteAdapterMonitor</node>
+    <node x="283.0" y="302.0">com.alibaba.otter.canal.adapter.launcher.CanalAdapterApplication</node>
+    <node x="0.0" y="302.0">com.alibaba.otter.canal.adapter.launcher.monitor.ApplicationConfigMonitor</node>
+    <node x="32.0" y="78.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterWorker</node>
     <node x="0.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.config.SpringContext</node>
-    <node x="0.0" y="302.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteConfigLoaderFactory</node>
-    <node x="0.0" y="594.0">com.alibaba.otter.canal.adapter.launcher.rest.CommonRest</node>
-    <node x="283.0" y="229.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.DbRemoteConfigLoader</node>
-    <node x="242.0" y="0.0">com.alibaba.otter.canal.adapter.launcher.loader.AbstractCanalAdapterWorker</node>
-    <node x="243.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.config.AdapterCanalConfig</node>
+    <node x="251.0" y="151.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteConfigLoaderFactory</node>
+    <node x="366.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.rest.CommonRest</node>
+    <node x="0.0" y="229.0">com.alibaba.otter.canal.adapter.launcher.monitor.remote.DbRemoteConfigLoader</node>
+    <node x="0.0" y="0.0">com.alibaba.otter.canal.adapter.launcher.loader.AbstractCanalAdapterWorker</node>
     <node x="171.0" y="594.0">com.alibaba.otter.canal.adapter.launcher.common.EtlLock</node>
-    <node x="0.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterService</node>
-    <node x="275.0" y="375.0">com.alibaba.otter.canal.adapter.launcher.config.BootstrapConfiguration</node>
-    <node x="390.0" y="521.0">com.alibaba.otter.canal.adapter.launcher.common.SyncSwitch</node>
+    <node x="235.0" y="448.0">com.alibaba.otter.canal.adapter.launcher.config.AdapterCanalConfig</node>
+    <node x="267.0" y="375.0">com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterService</node>
+    <node x="0.0" y="375.0">com.alibaba.otter.canal.adapter.launcher.config.BootstrapConfiguration</node>
+    <node x="0.0" y="594.0">com.alibaba.otter.canal.adapter.launcher.common.SyncSwitch</node>
   </nodes>
   <notes />
   <edges>
@@ -36,24 +34,12 @@
       <point x="0.0" y="-14.0" />
       <point x="0.0" y="14.0" />
     </edge>
-    <edge source="com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterKafkaWorker" target="com.alibaba.otter.canal.adapter.launcher.loader.AbstractCanalAdapterWorker">
-      <point x="0.0" y="-14.0" />
-      <point x="599.0" y="53.0" />
-      <point x="453.6666666666667" y="53.0" />
-      <point x="84.66666666666669" y="14.0" />
-    </edge>
-    <edge source="com.alibaba.otter.canal.adapter.launcher.loader.CanalAdapterRocketMQWorker" target="com.alibaba.otter.canal.adapter.launcher.loader.AbstractCanalAdapterWorker">
-      <point x="0.0" y="-14.0" />
-      <point x="127.0" y="53.0" />
-      <point x="284.3333333333333" y="53.0" />
-      <point x="-84.66666666666669" y="14.0" />
-    </edge>
     <edge source="com.alibaba.otter.canal.adapter.launcher.monitor.remote.DbRemoteConfigLoader" target="com.alibaba.otter.canal.adapter.launcher.monitor.remote.RemoteConfigLoader">
       <point x="0.0" y="-14.0" />
       <point x="0.0" y="14.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="115.0" y="53.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="310.0" y="311.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
