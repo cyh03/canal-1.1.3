@@ -1,10 +1,10 @@
 package com.alibaba.otter.canal.example;
 
-import java.net.InetSocketAddress;
-
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;
 import com.alibaba.otter.canal.common.utils.AddressUtils;
+
+import java.net.InetSocketAddress;
 
 /**
  * 单机模式的测试例子
@@ -22,6 +22,7 @@ public class SimpleCanalClientTest extends AbstractCanalClientTest {
         // 根据ip，直接创建链接，无HA的功能
         String destination = "example";
         String ip = AddressUtils.getHostIp();
+//        创建单机canal connector
         CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress(ip, 11111),
             destination,
             "",
