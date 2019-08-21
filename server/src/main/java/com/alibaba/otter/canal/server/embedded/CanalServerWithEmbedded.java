@@ -110,6 +110,7 @@ public class CanalServerWithEmbedded extends AbstractCanalLifeCycle implements C
                 if (metrics.isRunning()) {
                     metrics.register(canalInstance);
                 }
+//                启动canal instance
                 canalInstance.start();
                 logger.info("start CanalInstances[{}] successfully", destination);
             } finally {

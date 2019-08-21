@@ -87,6 +87,7 @@ public class CanalStater {
         }
 
         logger.info("## start the canal server.");
+//        创建nanal controller
         controller = new CanalController(properties);
         controller.start();
         logger.info("## the canal server is running now ......");

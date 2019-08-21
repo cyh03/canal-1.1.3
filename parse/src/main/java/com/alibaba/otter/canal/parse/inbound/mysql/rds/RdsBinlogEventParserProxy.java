@@ -88,8 +88,8 @@ public class RdsBinlogEventParserProxy extends MysqlEventParser {
                         @Override
                         public void run() {
                             rdsLocalBinlogEventParser.stop();
-                            RdsBinlogEventParserProxy.this.start();
                         }
+                            RdsBinlogEventParserProxy.this.start();
                     });
 
                 }

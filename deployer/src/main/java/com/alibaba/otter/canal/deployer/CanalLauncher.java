@@ -25,26 +25,29 @@ public class CanalLauncher {
 
     public static void main(String[] args) {
         try {
+//            canal服务端启动
             running = true;
             logger.info("## set default uncaught exception handler");
             setGlobalUncaughtExceptionHandler();
-
+//            加载canal.properties
             logger.info("## load canal configurations");
             String conf = System.getProperty("canal.conf", "classpath:canal.properties");
             Properties properties = new Properties();
             RemoteConfigLoader remoteConfigLoader = null;
             if (conf.startsWith(CLASSPATH_URL_PREFIX)) {
                 conf = StringUtils.substringAfter(conf, CLASSPATH_URL_PREFIX);
+//                加载canal.properties配置文件
                 properties.load(CanalLauncher.class.getClassLoader().getResourceAsStream(conf));
             } else {
                 properties.load(new FileInputStream(conf));
             }
 
+//            远程mysql管理配置
             remoteConfigLoader = RemoteConfigLoaderFactory.getRemoteConfigLoader(properties);
             if (remoteConfigLoader != null) {
-                // 加载远程canal.properties
+                // 从数据库中加载加载远程canal.properties
                 Properties remoteConfig = remoteConfigLoader.loadRemoteConfig();
-                // 加载remote instance配置
+                // 从数据库中加载加载remote instance配置
                 remoteConfigLoader.loadRemoteInstanceConfigs();
                 if (remoteConfig != null) {
                     properties = remoteConfig;

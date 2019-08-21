@@ -327,6 +327,7 @@ public class CanalController {
                     throw new CanalServerException("can't find destination:{}");
                 }
 
+//                配置模式有spring方式，manager模式，默认是manager模式
                 if (config.getMode().isManager()) {
                     ManagerCanalInstanceGenerator instanceGenerator = new ManagerCanalInstanceGenerator();
                     instanceGenerator.setCanalConfigClient(managerClients.get(config.getManagerAddress()));
@@ -337,6 +338,7 @@ public class CanalController {
                         try {
                             // 设置当前正在加载的通道，加载spring查找文件时会用到该变量
                             System.setProperty(CanalConstants.CANAL_DESTINATION_PROPERTY, destination);
+//                            加载spring配置文件
                             instanceGenerator.setBeanFactory(getBeanFactory(config.getSpringXml()));
                             return instanceGenerator.generate(destination);
                         } catch (Throwable e) {
