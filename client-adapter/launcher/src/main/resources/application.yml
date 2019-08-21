@@ -61,3 +61,4 @@ canal.conf:
 #        hosts: 127.0.0.1:9300
 #        properties:
 #          cluster.name: elasticsearch
+#adapter将会自动加载 conf/es 下的所有.yml结尾的配置文件

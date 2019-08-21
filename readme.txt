@@ -74,3 +74,33 @@ CanalLogPositionManager 设计
 CanalHAController类图设计
 失败检测常见方式可定时发送心跳语句到当前链接的数据库，超过一定次数检测失败时，尝试切换到备机
 如果有一套数据库主备信息管理系统，当数据库主备切换或者机器下线，推送配置到各个应用节点，HAController 收到后，控制 EventParser 进行链接切换
+
+在介绍instance配置之前，先了解一下canal如何维护一份增量订阅&消费的关系信息
+解析位点 (parse模块会记录，上一次解析binlog到了什么位置，对应组件为：CanalLogPositionManager)
+消费位点 (canal server在接收了客户端的ack后，就会记录客户端提交的最后位点，对应的组件为：CanalMetaManager)
+
+对应的两个位点组件，目前都有几种实现
+memory (memory-instance.xml中使用)
+zookeeper
+mixed
+file (file-instance.xml中使用，集合了file+memory模式，先写内存，定时刷新数据到本地file上)
+period (default-instance.xml中使用，集合了zookeeper+memory模式，先写内存，定时刷新数据到zookeeper上)
+
+memory-instance.xml介绍
+所有的组件(parser , sink , store)都选择了内存版模式，记录位点的都选择了memory模式，重启后又会回到初始位点进行解析
+特点：速度最快，依赖最少(不需要zookeeper)
+场景：一般应用在quickstart，或者是出现问题后，进行数据分析的场景，不应该将其应用于生产环境
+
+file-instance.xml介绍
+所有的组件(parser , sink , store)都选择了基于file持久化模式，注意，不支持HA机制.
+特点：支持单机持久化
+场景：生产环境，无HA需求，简单可用.
+
+default-instance.xml介绍
+所有的组件(parser , sink , store)都选择了持久化模式，目前持久化的方式主要是写入zookeeper，保证数据集群共享.
+特点：支持HA
+场景：生产环境，集群化部署.
+
+group-instance.xml介绍
+主要针对需要进行多库合并时，可以将多个物理instance合并为一个逻辑instance，提供客户端访问。
+场景：分库业务。 比如产品数据拆分了4个库，每个库会有一个instance，如果不用group，业务上要消费数据时，需要启动4个客户端，分别链接4个instance实例。使用group后，可以在canal server上合并为一个逻辑instance，只需要启动1个客户端，链接这个逻辑instance即可.
