@@ -3,6 +3,7 @@
 
 package com.alibaba.otter.canal.protocol;
 
+//
 public final class CanalEntry {
   private CanalEntry() {}
   public static void registerAllExtensions(

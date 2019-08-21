@@ -6,6 +6,7 @@ import java.util.List;
  * @author chengjin.lyf on 2018/8/7 下午2:26
  * @since 1.0.25
  */
+//
 public class RdsItem {
 
     private List<BinlogFile> BinLogFile;

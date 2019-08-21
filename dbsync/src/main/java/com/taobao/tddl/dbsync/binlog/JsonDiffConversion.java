@@ -1,10 +1,10 @@
 package com.taobao.tddl.dbsync.binlog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.taobao.tddl.dbsync.binlog.JsonConversion.Json_Value;
 import com.taobao.tddl.dbsync.binlog.JsonConversion.Json_enum_type;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 处理mysql8.0 parital json diff解析
@@ -16,19 +16,19 @@ public class JsonDiffConversion {
 
     /**
      * The JSON value in the given path is replaced with a new value. It has the
-     * same effect as `JSON_REPLACE(col, path, value)`.
+     * same effect as `JSON_REPLACE(col, path, value)`.给定路径中的JSON值被替换为一个新值。它具有与“JSON_REPLACE(col, path, value)”相同的效果。
      */
     public static final int DIFF_OPERATION_REPLACE    = 0;
     /**
      * Add a new element at the given path. If the path specifies an array
      * element, it has the same effect as `JSON_ARRAY_INSERT(col, path, value)`.
      * If the path specifies an object member, it has the same effect as
-     * `JSON_INSERT(col, path, value)`.
+     * `JSON_INSERT(col, path, value)`.在给定的路径上添加一个新元素。如果路径指定一个数组元素，它的效果与“JSON_ARRAY_INSERT(col, path, value)”相同。如果路径指定了对象成员，它的效果与“JSON_INSERT(col, path, value)”相同。
      */
     public static final int DIFF_OPERATION_INSERT     = 1;
     /**
      * The JSON value at the given path is removed from an array or object. It
-     * has the same effect as `JSON_REMOVE(col, path)`.
+     * has the same effect as `JSON_REMOVE(col, path)`.给定路径上的JSON值将从数组或对象中删除。它具有与“JSON_REMOVE(col, path)”相同的效果。
      */
     public static final int DIFF_OPERATION_REMOVE     = 2;
 

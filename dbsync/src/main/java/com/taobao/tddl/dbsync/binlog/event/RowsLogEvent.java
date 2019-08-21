@@ -1,14 +1,14 @@
 package com.taobao.tddl.dbsync.binlog.event;
 
-import java.util.BitSet;
-
 import com.taobao.tddl.dbsync.binlog.LogBuffer;
 import com.taobao.tddl.dbsync.binlog.LogContext;
 import com.taobao.tddl.dbsync.binlog.LogEvent;
 import com.taobao.tddl.dbsync.binlog.event.TableMapLogEvent.ColumnInfo;
 
+import java.util.BitSet;
+
 /**
- * Common base class for all row-containing log events.
+ * Common base class for all row-containing log events.所有包含行的日志事件的公共基类。
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
@@ -48,7 +48,17 @@ public abstract class RowsLogEvent extends LogEvent {
      * the last byte). The format of each value is described in the
      * log_event_print_value() function in log_event.cc.</li>
      * <li>(for UPDATE_ROWS_EVENT only) the previous two fields are repeated,
-     * representing a second table row.</li>
+     * representing a second table row.</li>固定的数据部分:
+     * 6字节。表的ID。
+     * 2字节。保留以备将来使用。
+     * 可变数据部分:
+     * 拥挤的整数。表中的列数。
+     * 大小可变的。位字段，表示是否使用每一列，每一列一个位。对于这个字段，N列所需的存储量是INT((N+7)/8)字节。
+     * 可变大小(仅适用于UPDATE_ROWS_LOG_EVENT)。位字段，指示UPDATE_ROWS_LOG_EVENT后像中是否使用每一列;每列一个位。对于这个字段，N列所需的存储量是INT((N+7)/8)字节。
+     * 大小可变的。零行或多行序列。结束由事件的大小决定。每一行的格式如下:
+     * 大小可变的。位字段，指示行中的每个字段是否为空。这里只列出根据变量数据部分中的第二个字段“使用”的列。如果变量数据部分中的第二个字段有N个1位，则该字段所需的存储量为INT((N+7)/8)字节。
+     * 大小可变的。行映像，包含所有表字段的值。这只列出使用的表字段(根据变量数据部分的第二个字段)和非null(根据前面的字段)。换句话说，这里列出的值的数量等于前一个字段中的零位的数量(不包括最后一个字节中的填充位)。每个值的格式在log_event.cc中的log_event_print_value()函数中描述。
+     * (仅对UPDATE_ROWS_EVENT)重复前面的两个字段，表示第二个表行。
      * </ul>
      * </ul>
      * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
@@ -69,7 +79,7 @@ public abstract class RowsLogEvent extends LogEvent {
      * Bitmap for columns available in the after image, if present. These fields
      * are only available for Update_rows events. Observe that the width of both
      * the before image COLS vector and the after image COLS vector is the same:
-     * the number of columns of the table on the master.
+     * the number of columns of the table on the master.在after图像中可用列的位图(如果存在)。这些字段只对Update_rows事件可用。注意，前图像COLS向量和后图像COLS向量的宽度相同:主表上的列数。
      */
     protected final BitSet   changeColumns;
 
@@ -86,7 +96,7 @@ public abstract class RowsLogEvent extends LogEvent {
      * enum enum_flag These definitions allow you to combine the flags into an
      * appropriate flag set using the normal bitwise operators. The implicit
      * conversion from an enum-constant to an integer is accepted by the
-     * compiler, which is then used to set the real set of flags.
+     * compiler, which is then used to set the real set of flags.enum enum_flag这些定义允许您使用普通的位操作符将标志组合到适当的标志集中。编译器接受从枚举常量到整数的隐式转换，然后用它设置真正的标志集。
      */
     private final int        flags;
 
@@ -101,7 +111,7 @@ public abstract class RowsLogEvent extends LogEvent {
 
     /**
      * Indicates that rows in this event are complete, that is contain values
-     * for all columns of the table.
+     * for all columns of the table.指示此事件中的行已完成，即包含表中所有列的值。
      */
     public static final int  COMPLETE_ROWS_F         = (1 << 3);
 

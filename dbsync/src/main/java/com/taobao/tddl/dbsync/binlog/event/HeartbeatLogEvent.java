@@ -13,7 +13,12 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  *   Two members of the class log_ident and Log_event::log_pos comprise 
  *   @see the event_coordinates instance. The coordinates that a heartbeat
  *   instance carries correspond to the last event master has sent from
- *   its binlog.
+ *   its binlog.复制事件，以确保从服务器的主服务器是活动的。
+ * 事件由主转储线程发起，并直接发送到
+ * 没有被记录的奴隶。从服务器本身并不将其存储在中继日志中
+ * 而是使用数据进行即时检查并丢弃事件。
+ *
+ * log_ident和Log_event::log_pos类的两个成员组成
  * </pre>
  * 
  * @author jianghang 2013-4-8 上午12:36:29

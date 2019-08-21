@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.protocol.position;
  * @author jianghang 2012-6-14 下午09:20:07
  * @version 1.0.0
  */
+//
 public class EntryPosition extends TimePosition {
 
     private static final long serialVersionUID      = 81432665066427482L;

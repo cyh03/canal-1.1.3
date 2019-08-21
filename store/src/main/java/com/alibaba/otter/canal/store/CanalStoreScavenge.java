@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.protocol.position.Position;
  * @author jianghang 2012-8-8 上午11:57:42
  * @version 1.0.0
  */
+//
 public interface CanalStoreScavenge {
 
     /**

@@ -66,6 +66,7 @@ import com.taobao.tddl.dbsync.binlog.event.mariadb.StartEncryptionLogEvent;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class LogDecoder {
 
     protected static final Log logger    = LogFactory.getLog(LogDecoder.class);

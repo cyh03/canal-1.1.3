@@ -1,9 +1,5 @@
 package com.alibaba.otter.canal.parse.inbound.mysql;
 
-import java.io.IOException;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.alibaba.otter.canal.parse.CanalEventParser;
 import com.alibaba.otter.canal.parse.exception.CanalParseException;
 import com.alibaba.otter.canal.parse.inbound.ErosaConnection;
@@ -14,6 +10,9 @@ import com.alibaba.otter.canal.parse.index.CanalLogPositionManager;
 import com.alibaba.otter.canal.parse.support.AuthenticationInfo;
 import com.alibaba.otter.canal.protocol.position.EntryPosition;
 import com.alibaba.otter.canal.protocol.position.LogPosition;
+import org.apache.commons.lang.StringUtils;
+
+import java.io.IOException;
 
 /**
  * 基于本地binlog文件的复制
@@ -21,6 +20,7 @@ import com.alibaba.otter.canal.protocol.position.LogPosition;
  * @author jianghang 2012-6-21 下午04:07:33
  * @version 1.0.0
  */
+//
 public class LocalBinlogEventParser extends AbstractMysqlEventParser implements CanalEventParser {
 
     // 数据库信息

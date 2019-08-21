@@ -1,13 +1,13 @@
 package com.alibaba.otter.canal.sink.entry.group;
 
+import com.alibaba.otter.canal.store.model.Event;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
-
-import com.alibaba.otter.canal.store.model.Event;
 
 /**
  * 时间归并控制
@@ -26,6 +26,7 @@ import com.alibaba.otter.canal.store.model.Event;
  * @author jianghang 2012-10-15 下午10:01:53
  * @version 1.0.0
  */
+//
 public class TimelineBarrier implements GroupBarrier<Event> {
 
     protected int                 groupSize;

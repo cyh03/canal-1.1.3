@@ -1,15 +1,16 @@
 package com.alibaba.otter.canal.protocol;
 
+import com.google.common.collect.Lists;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.google.common.collect.Lists;
 
 /**
  * @author machengyuan 2018-9-13 下午10:31:14
  * @version 1.0.0
  */
+//
 public class FlatMessage implements Serializable {
 
     private static final long         serialVersionUID = -3386650678735860050L;

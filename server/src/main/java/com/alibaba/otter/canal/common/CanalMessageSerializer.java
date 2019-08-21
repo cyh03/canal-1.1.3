@@ -13,6 +13,7 @@ import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.WireFormat;
 
+//
 public class CanalMessageSerializer {
 
     @SuppressWarnings("deprecation")

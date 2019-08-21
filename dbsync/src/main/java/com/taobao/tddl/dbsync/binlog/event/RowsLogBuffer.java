@@ -15,12 +15,13 @@ import com.taobao.tddl.dbsync.binlog.LogBuffer;
 import com.taobao.tddl.dbsync.binlog.LogEvent;
 
 /**
- * Extracting JDBC type & value information from packed rows-buffer.
+ * Extracting JDBC type & value information from packed rows-buffer.从压缩的行缓冲区中提取JDBC类型和值信息。
  * 
  * @see mysql-5.1.60/sql/log_event.cc - Rows_log_event::print_verbose_one_row
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class RowsLogBuffer {
 
     protected static final Log logger            = LogFactory.getLog(RowsLogBuffer.class);

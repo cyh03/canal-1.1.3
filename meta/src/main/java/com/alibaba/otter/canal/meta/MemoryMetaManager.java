@@ -1,11 +1,5 @@
 package com.alibaba.otter.canal.meta;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.alibaba.otter.canal.common.AbstractCanalLifeCycle;
 import com.alibaba.otter.canal.meta.exception.CanalMetaManagerException;
 import com.alibaba.otter.canal.protocol.ClientIdentity;
@@ -17,12 +11,19 @@ import com.google.common.collect.MapMaker;
 import com.google.common.collect.Maps;
 import com.google.common.collect.MigrateMap;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
+
 /**
  * 内存版实现
  * 
  * @author zebin.xuzb @ 2012-7-2
  * @version 1.0.0
  */
+//
 public class MemoryMetaManager extends AbstractCanalLifeCycle implements CanalMetaManager {
 
     protected Map<String, List<ClientIdentity>>              destinations;

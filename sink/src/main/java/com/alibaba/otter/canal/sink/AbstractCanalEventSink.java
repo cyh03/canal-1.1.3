@@ -1,14 +1,15 @@
 package com.alibaba.otter.canal.sink;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.alibaba.otter.canal.common.AbstractCanalLifeCycle;
 import com.alibaba.otter.canal.filter.CanalEventFilter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author jianghang 2012-7-23 下午01:02:45
  */
+//
 public abstract class AbstractCanalEventSink<T> extends AbstractCanalLifeCycle implements CanalEventSink<T> {
 
     protected CanalEventFilter                  filter;

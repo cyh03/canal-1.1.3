@@ -14,6 +14,7 @@ import com.taobao.tddl.dbsync.binlog.event.TableMapLogEvent;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class LogContext {
 
     private final Map<Long, TableMapLogEvent> mapOfTable = new HashMap<Long, TableMapLogEvent>();

@@ -10,6 +10,7 @@ import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
  * @author jianghang 2012-6-21 上午10:52:02
  * @version 1.0.0
  */
+//
 public class LogIdentity extends Position {
 
     private static final long serialVersionUID = 5530225131455662581L;

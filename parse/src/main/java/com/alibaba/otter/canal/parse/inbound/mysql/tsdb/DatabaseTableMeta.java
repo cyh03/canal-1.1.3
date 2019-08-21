@@ -46,6 +46,7 @@ import com.alibaba.otter.canal.protocol.position.EntryPosition;
  * @author agapple 2017年7月27日 下午10:47:55
  * @since 3.2.5
  */
+//
 public class DatabaseTableMeta implements TableMetaTSDB {
 
     public static final EntryPosition       INIT_POSITION    = new EntryPosition("0", 0L, -2L, -1L);

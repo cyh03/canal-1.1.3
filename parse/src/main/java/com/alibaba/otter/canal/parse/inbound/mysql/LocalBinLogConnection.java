@@ -28,6 +28,7 @@ import com.taobao.tddl.dbsync.binlog.event.QueryLogEvent;
  * 
  * @author yuanzu Date: 12-9-27 Time: 下午6:14
  */
+//
 public class LocalBinLogConnection implements ErosaConnection {
 
     private static final Logger logger     = LoggerFactory.getLogger(LocalBinLogConnection.class);

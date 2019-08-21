@@ -10,6 +10,7 @@ import static com.taobao.tddl.dbsync.binlog.event.RowsLogBuffer.usecondsToStr;
  * @author agapple 2016年6月30日 上午11:26:17
  * @since 1.0.22
  */
+//
 public class JsonConversion {
 
     // JSON TYPE

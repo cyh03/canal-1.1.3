@@ -1,16 +1,17 @@
 package com.taobao.tddl.dbsync.binlog.event;
 
-import java.nio.ByteBuffer;
-import java.util.UUID;
-
 import com.taobao.tddl.dbsync.binlog.LogBuffer;
 import com.taobao.tddl.dbsync.binlog.LogEvent;
+
+import java.nio.ByteBuffer;
+import java.util.UUID;
 
 /**
  * @author jianghang 2013-4-8 上午12:36:29
  * @version 1.0.3
  * @since mysql 5.6 / mariadb10
  */
+//
 public class GtidLogEvent extends LogEvent {
 
     // / Length of the commit_flag in event encoding

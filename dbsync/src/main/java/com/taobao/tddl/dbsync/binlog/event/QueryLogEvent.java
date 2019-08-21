@@ -249,7 +249,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * Q_CATALOG_CODE will never be written by a new master, but can still be
  * understood by a new slave. See Q_CHARSET_DATABASE_CODE in the table above.
  * When adding new status vars, please don't forget to update the
- * MAX_SIZE_LOG_EVENT_STATUS, and update function code_name
+ * MAX_SIZE_LOG_EVENT_STATUS, and update function code_name 每个修改数据库的查询都会创建一个Query_log_event，除非该查询是基于日志行的。
  * 
  * @see mysql-5.1.6/sql/logevent.cc - Query_log_event
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
@@ -260,14 +260,14 @@ public class QueryLogEvent extends LogEvent {
     /**
      * The maximum number of updated databases that a status of Query-log-event
      * can carry. It can redefined within a range [1..
-     * OVER_MAX_DBS_IN_EVENT_MTS].
+     * OVER_MAX_DBS_IN_EVENT_MTS].查询日志事件状态可携带的更新数据库的最大数量。它可以在一个范围内重新定义[1..]OVER_MAX_DBS_IN_EVENT_MTS]。
      */
     public static final int MAX_DBS_IN_EVENT_MTS      = 16;
 
     /**
      * When the actual number of databases exceeds MAX_DBS_IN_EVENT_MTS the
      * value of OVER_MAX_DBS_IN_EVENT_MTS is is put into the mts_accessed_dbs
-     * status.
+     * status.当数据库的实际数量超过MAX_DBS_IN_EVENT_MTS时，OVER_MAX_DBS_IN_EVENT_MTS的值被放入mts_accessed_dbs状态。
      */
     public static final int OVER_MAX_DBS_IN_EVENT_MTS = 254;
 
@@ -279,7 +279,7 @@ public class QueryLogEvent extends LogEvent {
     /**
      * Max number of possible extra bytes in a replication event compared to a
      * packet (i.e. a query) sent from client to master; First, an auxiliary
-     * log_event status vars estimation:
+     * log_event status vars estimation:与从客户端发送到主服务器的数据包(即查询)相比，复制事件中可能出现的最大额外字节数;首先，一个辅助的log_event状态变量估计:
      */
     public static final int MAX_SIZE_LOG_EVENT_STATUS = (1 + 4 /* type, flags2 */
                                                          + 1 + 8 /*
@@ -397,7 +397,12 @@ public class QueryLogEvent extends LogEvent {
      * <li>The SQL statement. The slave knows the size of the other fields in
      * the variable part (the sizes are given in the fixed data part), so by
      * subtraction it can know the size of the statement.</li>
-     * </ul>
+     * </ul>固定的数据部分:
+     * 4个字节。发出此语句的线程的ID。需要临时表。这对于DBA了解谁对主服务器做了什么也很有用。
+     * 4个字节。语句执行所用的时间(以秒为单位)。只适用于DBA的检查。
+     * 1个字节。语句执行时作为默认数据库的数据库名称的长度。这个名称稍后出现在变量数据部分。对于像INSERT INTO t VALUES(1)这样的语句来说，这是必要的，这些语句不指定数据库，而是依赖于之前使用时选择的默认数据库。
+     * 2字节。在主程序上执行语句时产生的错误代码。错误代码在include/mysqld_error.h中定义。0表示没有错误。为什么二进制日志中会存在非零错误代码的语句?这主要是因为在事务中使用了非事务性表。例如，如果插入…SELECT在将1000行插入MyISAM表后失败(例如，违反了重复键)，我们必须将此语句写入二进制日志，因为它确实修改了MyISAM表。对于事务性表，不应该有非零错误代码的事件(尽管它也可能发生，例如连接被中断(Control-C))。奴隶检查错误代码:在执行语句本身之后，它将得到的错误代码与事件中的错误代码进行比较，如果它们不同，它将停止复制(除非——奴隶跳过错误被用来忽略错误)。
+     * 2字节(v1, v3中没有)。状态变量块的长度。
      * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
      */
     private String          user;
@@ -408,7 +413,7 @@ public class QueryLogEvent extends LogEvent {
     protected String        catalog;
     protected final String  dbname;
 
-    /** The number of seconds the query took to run on the master. */
+    /** The number of seconds the query took to run on the master. 在主服务器上运行查询所需的秒数。*/
     // The time in seconds that the statement took to execute. Only useful for
     // inspection by the DBA
     private final long      execTime;
@@ -418,11 +423,11 @@ public class QueryLogEvent extends LogEvent {
     /**
      * 'flags2' is a second set of flags (on top of those in Log_event), for
      * session variables. These are thd->options which is & against a mask
-     * (OPTIONS_WRITTEN_TO_BIN_LOG).
+     * (OPTIONS_WRITTEN_TO_BIN_LOG).'flags2'是会话变量的第二组标志(在Log_event的标志之上)。这些是thd->选项，它是针对掩码的& (OPTIONS_WRITTEN_TO_BIN_LOG)。
      */
     private long            flags2;
 
-    /** In connections sql_mode is 32 bits now but will be 64 bits soon */
+    /** In connections sql_mode is 32 bits now but will be 64 bits soon 在连接sql_mode中，现在是32位，但很快就会变成64位*/
     private long            sql_mode;
 
     private long            autoIncrementIncrement    = -1;
@@ -544,7 +549,7 @@ public class QueryLogEvent extends LogEvent {
      * compared to Q_CATALOG_CODE. The reason we didn't simply re-use
      * Q_CATALOG_CODE is that then a 5.0.3 slave of this 5.0.x (x>=4) master
      * would crash (segfault etc) because it would expect a 0 when there is
-     * none.
+     * none.Q_CATALOG_NZ_CODE是无结束零存储的目录;MySQL 5.0使用它。x x > = 4。与Q_CATALOG_CODE相比，在binlog中的每个Query_log_event中保存一个字节。我们没有简单地重用Q_CATALOG_CODE的原因是它是这个5.0的5.0.3从属版本。x (x>=4) master会崩溃(segfault等)，因为当没有0时，它会期望得到0。
      */
     public static final int Q_CATALOG_NZ_CODE                 = 6;
 
@@ -561,14 +566,14 @@ public class QueryLogEvent extends LogEvent {
     /**
      * Q_UPDATED_DB_NAMES status variable collects of the updated databases
      * total number and their names to be propagated to the slave in order to
-     * facilitate the parallel applying of the Query events.
+     * facilitate the parallel applying of the Query events.Q_UPDATED_DB_NAMES状态变量收集更新数据库的总数及其名称，以便将它们传播到从数据库，以便并行应用查询事件。
      */
     public static final int Q_UPDATED_DB_NAMES                = 12;
 
     public static final int Q_MICROSECONDS                    = 13;
     /**
      * A old (unused now) code for Query_log_event status similar to
-     * G_COMMIT_TS.
+     * G_COMMIT_TS.Query_log_event状态的旧代码(现在未使用)，类似于G_COMMIT_TS。
      */
     public static final int Q_COMMIT_TS                       = 14;
     /**
@@ -579,17 +584,17 @@ public class QueryLogEvent extends LogEvent {
      * The master connection @@session.explicit_defaults_for_timestamp which is
      * recorded for queries, CREATE and ALTER table that is defined with a
      * TIMESTAMP column, that are dependent on that feature. For pre-WL6292
-     * master's the associated with this code value is zero.
+     * master's the associated with this code value is zero.主连接@@session。explicit_defaults_for_timestamp记录查询、创建和修改表，这些表由依赖于该特性的时间戳列定义。对于pre-WL6292 master's，与此代码值关联的值为零。
      */
     public static final int Q_EXPLICIT_DEFAULTS_FOR_TIMESTAMP = 16;
 
     /**
-     * The variable carries xid info of 2pc-aware (recoverable) DDL queries.
+     * The variable carries xid info of 2pc-aware (recoverable) DDL queries.该变量携带2pc感知(可恢复)DDL查询的xid信息。
      */
     public static final int Q_DDL_LOGGED_WITH_XID             = 17;
     /**
      * This variable stores the default collation for the utf8mb4 character set.
-     * Used to support cross-version replication.
+     * Used to support cross-version replication.此变量存储utf8mb4字符集的默认排序规则。用于支持跨版本复制。
      */
     public static final int Q_DEFAULT_COLLATION_FOR_UTF8MB4   = 18;
 
@@ -669,7 +674,10 @@ public class QueryLogEvent extends LogEvent {
                          * Notice, the following check is positive also in case
                          * of the master's MAX_DBS_IN_EVENT_MTS > the slave's
                          * one and the event contains e.g the master's
-                         * MAX_DBS_IN_EVENT_MTS db:s.
+                         * MAX_DBS_IN_EVENT_MTS db:s.注意，下面的检查也是阳性的
+                         * *主进程的MAX_DBS_IN_EVENT_MTS >，从进程的MAX_DBS_IN_EVENT_MTS >
+                         * * 1和事件包含e。g主人的
+                         * * MAX_DBS_IN_EVENT_MTS db: s。
                          */
                         if (mtsAccessedDbs > MAX_DBS_IN_EVENT_MTS) {
                             mtsAccessedDbs = OVER_MAX_DBS_IN_EVENT_MTS;
@@ -907,7 +915,7 @@ public class QueryLogEvent extends LogEvent {
      * the SQL variables SQL_AUTO_IS_NULL, FOREIGN_KEY_CHECKS, UNIQUE_CHECKS,
      * and AUTOCOMMIT, documented in the "SET Syntax" section of the MySQL
      * Manual. This field is always written to the binlog in version >= 5.0, and
-     * never written in version < 5.0.
+     * never written in version < 5.0.thd->选项中的标志是二进制的，ed带有OPTIONS_WRITTEN_TO_BIN_LOG选项。thd->选项位字段包含“SELECT”选项。OPTIONS_WRITTEN标识那些需要写入binlog的选项(并非所有选项都需要)。具体来说，OPTIONS_WRITTEN_TO_BIN_LOG = (OPTION_AUTO_IS_NULL | option_no_foreign_key_check | option_relaxed_unique_check | OPTION_NOT_AUTOCOMMIT)，或者十六进制中的0x0c084000。这些标志对应于SQL变量SQL_AUTO_IS_NULL、foreign_key_check、unique_check和AUTOCOMMIT，这些变量记录在MySQL手册的“SET Syntax”部分。该字段总是在版本>= 5.0中写入binlog，从来没有在版本< 5.0中写入。
      */
     public final long getFlags2() {
         return flags2;

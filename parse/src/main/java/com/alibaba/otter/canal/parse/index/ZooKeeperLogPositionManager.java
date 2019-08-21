@@ -11,6 +11,7 @@ import com.alibaba.otter.canal.protocol.position.LogPosition;
 /**
  * Created by yinxiu on 17/3/17. Email: marklin.hz@gmail.com
  */
+//
 public class ZooKeeperLogPositionManager extends AbstractLogPositionManager {
 
     private final ZkClientx zkClientx;

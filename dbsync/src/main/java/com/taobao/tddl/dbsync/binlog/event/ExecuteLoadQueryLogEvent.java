@@ -1,8 +1,8 @@
 package com.taobao.tddl.dbsync.binlog.event;
 
-import java.io.IOException;
-
 import com.taobao.tddl.dbsync.binlog.LogBuffer;
+
+import java.io.IOException;
 
 /**
  * Event responsible for LOAD DATA execution, it similar to Query_log_event but
@@ -16,7 +16,11 @@ import com.taobao.tddl.dbsync.binlog.LogBuffer;
  * </li>
  * <li>1 byte. How to handle duplicates: LOAD_DUP_ERROR = 0, LOAD_DUP_IGNORE =
  * 1, LOAD_DUP_REPLACE = 2</li>
- * </ul>
+ * </ul>负责加载数据执行的事件，它类似于Query_log_event，但在执行查询之前，它将加载数据查询中的原始文件名替换为临时文件的名称。
+ * 4个字节。要加载的文件的ID。
+ * 4个字节。用于文件名替换的语句中的起始位置。
+ * 4个字节。用于文件名替换的语句中的结束位置。
+ * 1个字节。如何处理重复:LOAD_DUP_ERROR = 0, LOAD_DUP_IGNORE = 1, LOAD_DUP_REPLACE = 2
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
@@ -26,10 +30,10 @@ public final class ExecuteLoadQueryLogEvent extends QueryLogEvent {
     /** file_id of temporary file */
     private long            fileId;
 
-    /** pointer to the part of the query that should be substituted */
+    /** pointer to the part of the query that should be substituted 指向应该替换的查询部分的指针*/
     private int             fnPosStart;
 
-    /** pointer to the end of this part of query */
+    /** pointer to the end of this part of query 指向查询这一部分末尾的指针*/
     private int             fnPosEnd;
 
     /*
@@ -42,7 +46,7 @@ public final class ExecuteLoadQueryLogEvent extends QueryLogEvent {
     /**
      * We have to store type of duplicate handling explicitly, because for LOAD
      * DATA it also depends on LOCAL option. And this part of query will be
-     * rewritten during replication so this information may be lost...
+     * rewritten during replication so this information may be lost...我们必须显式地存储重复处理的类型，因为对于加载数据，它还依赖于本地选项。查询的这一部分将在复制过程中重写，因此可能会丢失这些信息……
      */
     private int             dupHandling;
 

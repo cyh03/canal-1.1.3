@@ -1,22 +1,22 @@
 package com.alibaba.otter.canal.store.model;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
-
 import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
 import com.alibaba.otter.canal.protocol.CanalEntry;
 import com.alibaba.otter.canal.protocol.CanalEntry.EntryType;
 import com.alibaba.otter.canal.protocol.CanalEntry.EventType;
 import com.alibaba.otter.canal.protocol.position.LogIdentity;
 import com.google.protobuf.ByteString;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * store存储数据对象
  * 
  * @author jianghang 2012-7-13 下午03:03:03
  */
+//
 public class Event implements Serializable {
 
     private static final long serialVersionUID = 1333330351758762739L;

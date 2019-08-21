@@ -1,10 +1,10 @@
 package com.alibaba.otter.canal.sink;
 
-import java.net.InetSocketAddress;
-
 import com.alibaba.otter.canal.common.CanalLifeCycle;
 import com.alibaba.otter.canal.sink.entry.group.GroupEventSink;
 import com.alibaba.otter.canal.sink.exception.CanalSinkException;
+
+import java.net.InetSocketAddress;
 
 /**
  * event事件消费者
@@ -16,6 +16,7 @@ import com.alibaba.otter.canal.sink.exception.CanalSinkException;
  * @author jianghang 2012-6-21 下午05:03:40
  * @version 1.0.0
  */
+//
 public interface CanalEventSink<T> extends CanalLifeCycle {
 
     /**

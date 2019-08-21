@@ -14,6 +14,7 @@ package com.alibaba.otter.canal.spi;
  * </pre>
  * @author Chuanyi Li
  */
+//
 public interface CanalMetricsProvider {
 
     /**

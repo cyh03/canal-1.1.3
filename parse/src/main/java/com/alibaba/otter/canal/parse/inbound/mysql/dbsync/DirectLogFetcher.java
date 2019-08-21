@@ -17,6 +17,7 @@ import com.taobao.tddl.dbsync.binlog.LogFetcher;
  * @author jianghang 2013-1-14 下午07:39:30
  * @version 1.0.0
  */
+//
 public class DirectLogFetcher extends LogFetcher {
 
     protected static final Logger logger                          = LoggerFactory.getLogger(DirectLogFetcher.class);

@@ -1,18 +1,18 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.rds.request;
 
-import java.util.Date;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.util.EntityUtils;
-
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.otter.canal.parse.inbound.mysql.rds.data.DescribeBinlogFileResult;
+import org.apache.http.HttpResponse;
+import org.apache.http.util.EntityUtils;
+
+import java.util.Date;
 
 /**
  * @author chengjin.lyf on 2018/8/7 下午3:41
  * @since 1.0.25
  */
+//
 public class DescribeBinlogFilesRequest extends AbstractRequest<DescribeBinlogFileResult> {
 
     public DescribeBinlogFilesRequest(){

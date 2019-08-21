@@ -58,7 +58,7 @@ public abstract class LogFetcher extends LogBuffer implements Closeable {
     /**
      * Increases the capacity of this <tt>LogFetcher</tt> instance, if
      * necessary, to ensure that it can hold at least the number of elements
-     * specified by the minimum capacity argument.
+     * specified by the minimum capacity argument.如果需要，增加这个LogFetcher实例的容量，以确保它至少可以容纳由最小容量参数指定的元素数量。
      * 
      * @param minCapacity the desired minimum capacity
      */
@@ -74,7 +74,7 @@ public abstract class LogFetcher extends LogBuffer implements Closeable {
     }
 
     /**
-     * Fetches the next frame of binary-log, and fill it in buffer.
+     * Fetches the next frame of binary-log, and fill it in buffer.获取二进制日志的下一帧，并将其填充到缓冲区中。
      */
     public abstract boolean fetch() throws IOException;
 

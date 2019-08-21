@@ -3,62 +3,64 @@
   <ID>JAVA</ID>
   <OriginalElement>com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler</OriginalElement>
   <nodes>
-    <node x="0.0" y="78.0">com.alibaba.otter.canal.sink.AbstractCanalEventSink</node>
-    <node x="92.75" y="234.0">com.alibaba.otter.canal.sink.entry.group.GroupEventSink</node>
-    <node x="0.0" y="463.0">com.alibaba.otter.canal.sink.entry.group.TimelineTransactionBarrier</node>
-    <node x="327.75" y="0.0">com.alibaba.otter.canal.sink.CanalEventDownStreamHandler</node>
-    <node x="92.75" y="0.0">com.alibaba.otter.canal.sink.CanalEventSink</node>
-    <node x="44.0" y="385.0">com.alibaba.otter.canal.sink.entry.group.TimelineBarrier</node>
-    <node x="331.75" y="156.0">com.alibaba.otter.canal.sink.entry.HeartBeatEntryEventHandler</node>
-    <node x="56.0" y="307.0">com.alibaba.otter.canal.sink.entry.group.GroupBarrier</node>
-    <node x="295.75" y="78.0">com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler</node>
-    <node x="92.75" y="156.0">com.alibaba.otter.canal.sink.entry.EntryEventSink</node>
+    <node x="0.0" y="79.0">com.alibaba.otter.canal.sink.AbstractCanalEventSink</node>
+    <node x="341.0" y="469.0">com.alibaba.otter.canal.sink.entry.group.TimelineTransactionBarrier</node>
+    <node x="78.25" y="237.0">com.alibaba.otter.canal.sink.entry.group.GroupEventSink</node>
+    <node x="26.5" y="311.0">com.alibaba.otter.canal.sink.CanalEventDownStreamHandler</node>
+    <node x="80.75" y="0.0">com.alibaba.otter.canal.sink.CanalEventSink</node>
+    <node x="377.5" y="390.0">com.alibaba.otter.canal.sink.entry.group.TimelineBarrier</node>
+    <node x="35.0" y="469.0">com.alibaba.otter.canal.sink.entry.HeartBeatEntryEventHandler</node>
+    <node x="383.0" y="311.0">com.alibaba.otter.canal.sink.entry.group.GroupBarrier</node>
+    <node x="0.0" y="390.0">com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler</node>
+    <node x="81.25" y="158.0">com.alibaba.otter.canal.sink.entry.EntryEventSink</node>
   </nodes>
   <notes />
   <edges>
     <edge source="com.alibaba.otter.canal.sink.entry.group.GroupEventSink" target="com.alibaba.otter.canal.sink.entry.EntryEventSink">
-      <point x="0.0" y="-14.0" />
-      <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="com.alibaba.otter.canal.sink.entry.group.TimelineBarrier" target="com.alibaba.otter.canal.sink.entry.group.GroupBarrier">
-      <point x="0.0" y="-14.0" />
-      <point x="0.0" y="14.0" />
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.entry.group.TimelineTransactionBarrier" target="com.alibaba.otter.canal.sink.entry.group.TimelineBarrier">
-      <point x="0.0" y="-14.0" />
-      <point x="0.0" y="14.0" />
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.alibaba.otter.canal.sink.entry.group.TimelineBarrier" target="com.alibaba.otter.canal.sink.entry.group.GroupBarrier">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.entry.EntryEventSink" target="com.alibaba.otter.canal.sink.AbstractCanalEventSink">
-      <point x="-39.5" y="-14.0" />
-      <point x="132.25" y="131.0" />
-      <point x="111.0" y="131.0" />
-      <point x="0.0" y="14.0" />
+      <point x="-35.5" y="-14.5" />
+      <point x="116.75" y="133.0" />
+      <point x="98.0" y="133.0" />
+      <point x="0.0" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.entry.HeartBeatEntryEventHandler" target="com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler">
-      <point x="0.0" y="-14.0" />
-      <point x="0.0" y="14.0" />
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.entry.EntryEventSink" target="com.alibaba.otter.canal.sink.CanalEventSink">
-      <point x="39.5" y="-14.0" />
-      <point x="211.25" y="131.0" />
-      <point x="232.5" y="131.0" />
-      <point x="232.5" y="53.0" />
-      <point x="211.25" y="53.0" />
-      <point x="39.5" y="14.0" />
+      <point x="35.5" y="-14.5" />
+      <point x="187.75" y="133.0" />
+      <point x="206.5" y="133.0" />
+      <point x="206.5" y="54.0" />
+      <point x="188.0" y="54.0" />
+      <point x="35.75" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.AbstractCanalEventSink" target="com.alibaba.otter.canal.sink.CanalEventSink">
-      <point x="0.0" y="-14.0" />
-      <point x="111.0" y="53.0" />
-      <point x="132.25" y="53.0" />
-      <point x="-39.5" y="14.0" />
+      <point x="0.0" y="-14.5" />
+      <point x="98.0" y="54.0" />
+      <point x="116.5" y="54.0" />
+      <point x="-35.75" y="14.5" />
     </edge>
     <edge source="com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler" target="com.alibaba.otter.canal.sink.CanalEventDownStreamHandler">
-      <point x="0.0" y="-14.0" />
-      <point x="0.0" y="14.0" />
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="252.0" y="92.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="296.0" y="246.0" />
+  <SelectedNodes>
+    <node>com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

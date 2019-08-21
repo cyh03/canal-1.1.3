@@ -10,7 +10,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
 /**
  * User_var_log_event. Every time a query uses the value of a user variable, a
  * User_var_log_event is written before the Query_log_event, to set the user
- * variable.
+ * variable.User_var_log_event。每次查询使用用户变量的值时，都会在Query_log_event之前编写User_var_log_event来设置用户变量。
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
@@ -36,7 +36,16 @@ public final class UserVarLogEvent extends LogEvent {
      * <li>Variable-sized. For a string variable, this is the string. For a
      * float or integer variable, this is its value in 8 bytes.</li>
      * </ul>
-     * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
+     * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log 固定数据部分:空
+     * 可变数据部分:
+     * 4个字节。用户变量名的大小。
+     * 用户变量名。
+     * 1个字节。如果变量值是SQL NULL值，则非0，否则为0。如果该字节为0，则事件中存在以下部分。
+     * 1个字节。用户变量类型。该值对应于include/mysql_com.h中定义的enum Item_result元素。
+     * 4个字节。用户变量(字符串变量所需)的字符集数目。字符集号实际上是一个排序规则号，它指示一个字符集/排序规则对。
+     * 4个字节。用户变量值的大小(对应于Item_string类的成员val_len)。
+     * 大小可变的。对于字符串变量，这就是字符串。对于浮点或整数变量，这是以8字节为单位的值。
+     * 来源:http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
      */
     private final String       name;
     private final Serializable value;

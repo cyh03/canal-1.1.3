@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.deployer.monitor;
  * @author jianghang 2013-2-18 下午01:19:29
  * @version 1.0.1
  */
+//
 public interface InstanceAction {
 
     /**

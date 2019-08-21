@@ -64,6 +64,7 @@ import com.taobao.tddl.dbsync.binlog.event.mariadb.AnnotateRowsEvent;
  * @author jianghang 2013-1-17 下午02:41:14
  * @version 1.0.0
  */
+//
 public class LogEventConvert extends AbstractCanalLifeCycle implements BinlogParser<LogEvent> {
 
     public static final String          XA_XID              = "XA_XID";

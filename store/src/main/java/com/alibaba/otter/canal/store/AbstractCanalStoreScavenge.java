@@ -1,14 +1,13 @@
 package com.alibaba.otter.canal.store;
 
-import java.util.List;
-
-import org.springframework.util.CollectionUtils;
-
 import com.alibaba.otter.canal.common.AbstractCanalLifeCycle;
 import com.alibaba.otter.canal.meta.CanalMetaManager;
 import com.alibaba.otter.canal.protocol.ClientIdentity;
 import com.alibaba.otter.canal.protocol.position.LogPosition;
 import com.alibaba.otter.canal.protocol.position.Position;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 
 /**
  * store回收机制
@@ -16,6 +15,7 @@ import com.alibaba.otter.canal.protocol.position.Position;
  * @author jianghang 2012-8-8 下午12:57:36
  * @version 1.0.0
  */
+//
 public abstract class AbstractCanalStoreScavenge extends AbstractCanalLifeCycle implements CanalStoreScavenge {
 
     protected String           destination;

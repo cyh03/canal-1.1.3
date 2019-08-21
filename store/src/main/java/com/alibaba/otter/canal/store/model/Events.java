@@ -1,13 +1,12 @@
 package com.alibaba.otter.canal.store.model;
 
+import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
+import com.alibaba.otter.canal.protocol.position.PositionRange;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
-
-import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
-import com.alibaba.otter.canal.protocol.position.PositionRange;
 
 /**
  * 代表一组数据对象的集合
@@ -15,6 +14,7 @@ import com.alibaba.otter.canal.protocol.position.PositionRange;
  * @author jianghang 2012-6-14 下午09:07:41
  * @version 1.0.0
  */
+//
 public class Events<EVENT> implements Serializable {
 
     private static final long serialVersionUID = -7337454954300706044L;

@@ -6,6 +6,7 @@ import java.util.Date;
  * @author agapple 2017年7月27日 下午11:09:41
  * @since 1.0.25
  */
+//
 public class MetaSnapshotDO {
 
     private Long   id;

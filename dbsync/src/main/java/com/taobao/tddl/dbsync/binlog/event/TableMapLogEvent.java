@@ -296,7 +296,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * <td>The pack length, i.e., the number of bytes needed to represent the length
  * of the geometry: 1, 2, 3, or 4.</td>
  * </tr>
- * </table>
+ * </table>在基于行模式下，每个行操作事件之前都有一个Table_map_log_event，它将表定义映射到一个数字。表定义由数据库名、表名和列定义组成。Post-Header有以下组件:
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
@@ -322,7 +322,19 @@ public final class TableMapLogEvent extends LogEvent {
      * format.</li>
      * <li>Variable-sized. Bit-field indicating whether each column can be NULL,
      * one bit per column. For this field, the amount of storage required for N
-     * columns is INT((N+7)/8) bytes.</li>
+     * columns is INT((N+7)/8) bytes.</li>固定的数据部分:
+     * 6字节。表的ID。
+     * 2字节。保留以备将来使用。
+     * 可变数据部分:
+     * 1个字节。数据库名称的长度。
+     * 大小可变的。数据库名称(以null结尾)。
+     * 1个字节。表名的长度。
+     * 大小可变的。表名(以null结尾)。
+     * 拥挤的整数。表中的列数。
+     * 大小可变的。列类型数组，每列一个字节。
+     * 拥挤的整数。元数据块的长度。
+     * 大小可变的。元数据块;有关内容和格式，请参见log_event.h。
+     * 大小可变的。位字段，指示每列是否可以为空，每列一个位。对于这个字段，N列所需的存储量是INT((N+7)/8)字节。
      * </ul>
      * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
      */

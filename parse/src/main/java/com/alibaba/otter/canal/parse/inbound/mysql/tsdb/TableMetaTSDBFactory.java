@@ -6,7 +6,7 @@ package com.alibaba.otter.canal.parse.inbound.mysql.tsdb;
  * @author agapple 2018年8月8日 上午11:01:08
  * @since 1.0.26
  */
-
+//
 public interface TableMetaTSDBFactory {
 
     /**

@@ -1,15 +1,14 @@
 package com.alibaba.otter.canal.deployer;
 
-import java.io.FileInputStream;
-import java.util.Properties;
-
+import com.alibaba.otter.canal.deployer.monitor.remote.RemoteCanalConfigMonitor;
+import com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoader;
+import com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoaderFactory;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoader;
-import com.alibaba.otter.canal.deployer.monitor.remote.RemoteConfigLoaderFactory;
-import com.alibaba.otter.canal.deployer.monitor.remote.RemoteCanalConfigMonitor;
+import java.io.FileInputStream;
+import java.util.Properties;
 
 /**
  * canal独立版本启动的入口类
@@ -17,6 +16,7 @@ import com.alibaba.otter.canal.deployer.monitor.remote.RemoteCanalConfigMonitor;
  * @author jianghang 2012-11-6 下午05:20:49
  * @version 1.0.0
  */
+//
 public class CanalLauncher {
 
     private static final String    CLASSPATH_URL_PREFIX = "classpath:";

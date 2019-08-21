@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.parse.inbound;
  * @author jianghang 2012-6-26 下午04:49:56
  * @version 1.0.0
  */
+//
 public interface HeartBeatCallback {
 
     /**

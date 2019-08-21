@@ -8,6 +8,7 @@ import com.taobao.tddl.dbsync.binlog.LogBuffer;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class CreateFileLogEvent extends LoadLogEvent {
 
     protected LogBuffer     blockBuf;

@@ -1,16 +1,16 @@
 package com.alibaba.otter.canal.protocol;
 
-import java.io.Serializable;
-
+import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
+import java.io.Serializable;
 
 /**
  * @author zebin.xuzb @ 2012-6-20
  * @version 1.0.0
  */
+//
 public class ClientIdentity implements Serializable {
 
     private static final long serialVersionUID = -8262100681930834834L;

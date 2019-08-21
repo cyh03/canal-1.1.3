@@ -1,8 +1,5 @@
 package com.alibaba.otter.canal.parse.inbound.mysql;
 
-import java.nio.charset.Charset;
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.alibaba.otter.canal.filter.CanalEventFilter;
 import com.alibaba.otter.canal.filter.aviater.AviaterRegexFilter;
 import com.alibaba.otter.canal.parse.CanalEventParser;
@@ -17,6 +14,10 @@ import com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDB;
 import com.alibaba.otter.canal.parse.inbound.mysql.tsdb.TableMetaTSDBFactory;
 import com.alibaba.otter.canal.protocol.position.EntryPosition;
 
+import java.nio.charset.Charset;
+import java.util.concurrent.atomic.AtomicLong;
+
+//
 public abstract class AbstractMysqlEventParser extends AbstractEventParser {
 
     protected static final long    BINLOG_START_OFFEST       = 4L;

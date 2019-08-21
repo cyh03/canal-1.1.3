@@ -90,7 +90,7 @@ public class LogBuffer {
 
     /**
      * Sets this buffer's position. If the mark is defined and larger than the
-     * new position then it is discarded. </p>
+     * new position then it is discarded. </p>设置此缓冲区的位置。如果标记被定义并且大于新位置，那么它将被丢弃。
      * 
      * @param newPosition The new position value; must be non-negative and no
      * larger than the current limit
@@ -164,7 +164,7 @@ public class LogBuffer {
     /**
      * Sets this buffer's limit. If the position is larger than the new limit
      * then it is set to the new limit. If the mark is defined and larger than
-     * the new limit then it is discarded. </p>
+     * the new limit then it is discarded. </p>设置此缓冲区的限制。如果该位置大于新极限，则将其设置为新极限。如果标记被定义并且大于新的限制，那么它将被丢弃。
      * 
      * @param newLimit The new limit value; must be non-negative and no larger
      * than this buffer's capacity
@@ -997,7 +997,12 @@ public class LogBuffer {
      * 0xffffff-0xffffffffffffffff.</li>
      * </ul>
      * That representation allows a first byte value of 251 to represent the SQL
-     * NULL value.
+     * NULL value.从缓冲区返回包装号。(little-endian)一个打包整数可以存储最多8字节的整数，而小整数仍然可以使用1、3或4字节。根据下表，第一个字节的值决定如何读取数字。
+     * 第一个字节是数字(在0-250范围内)。没有使用额外的字节。
+     * 又使用了252个字节。这个数字的范围是251-0xffff。
+     * 又用了三个字节。这个数字的范围是0xffff-0xffffff。
+     * 又使用了8个字节。这个数字的范围是0xffffff- 0xffffffffffffffffff。
+     * 该表示允许251的第一个字节值表示SQL NULL值。
      */
     public final long getPackedLong(final int pos) {
         final int lead = getUint8(pos);
@@ -1292,7 +1297,13 @@ public class LogBuffer {
      *   0x00       - 0
      * 
      * 54567000000 / 10^{10} = 5.4567
-     * </pre>
+     * </pre>binlog中的十进制表示法如下:
+     *
+     * 第一个位的符号是set == +， unset == -
+     * 每4个字节代表9位大端数字，所以
+     * 如果将这些四边形的值作为大端整数打印在后面
+     * 另一种方法是，用十进制表示整个数字字符串。什么
+     * 剩下的是一个符号和一个小数点。
      * 
      * @see mysql-5.1.60/strings/decimal.c - bin2decimal()
      * @see mysql-5.1.60/strings/decimal.c - decimal2string()

@@ -5,6 +5,7 @@ import com.alibaba.otter.canal.instance.core.CanalInstance;
 /**
  * @author Chuanyi Li
  */
+//
 public class NopCanalMetricsService implements CanalMetricsService {
 
     public static final NopCanalMetricsService NOP = new NopCanalMetricsService();

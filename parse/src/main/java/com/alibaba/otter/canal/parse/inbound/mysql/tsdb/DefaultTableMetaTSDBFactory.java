@@ -4,6 +4,7 @@ package com.alibaba.otter.canal.parse.inbound.mysql.tsdb;
  * @author agapple 2017年10月11日 下午8:45:40
  * @since 1.0.25
  */
+//
 public class DefaultTableMetaTSDBFactory implements TableMetaTSDBFactory {
 
     /**

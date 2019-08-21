@@ -1,9 +1,9 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.tsdb;
 
-import java.util.Map;
-
 import com.alibaba.otter.canal.parse.inbound.TableMeta;
 import com.alibaba.otter.canal.protocol.position.EntryPosition;
+
+import java.util.Map;
 
 /**
  * 表结构的时间序列存储
@@ -11,6 +11,7 @@ import com.alibaba.otter.canal.protocol.position.EntryPosition;
  * @author agapple 2017年7月27日 下午4:06:30
  * @since 1.0.25
  */
+//
 public interface TableMetaTSDB {
 
     /**

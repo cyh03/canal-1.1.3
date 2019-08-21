@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.common.CanalLifeCycle;
  * @author jianghang 2013-2-6 下午06:19:56
  * @version 1.0.1
  */
+//
 public interface InstanceConfigMonitor extends CanalLifeCycle {
 
     void register(String destination, InstanceAction action);

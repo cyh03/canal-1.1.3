@@ -19,7 +19,8 @@ public class RowsQueryLogEvent extends IgnorableLogEvent {
 
         /*
          * m_rows_query length is stored using only one byte, but that length is
-         * ignored and the complete query is read.
+         * ignored and the complete query is read.m_rows_query长度只使用一个字节存储，但是这个长度是
+         *被忽略，然后读取完整的查询。
          */
         int offset = commonHeaderLen + postHeaderLen + 1;
         int len = buffer.limit() - offset;

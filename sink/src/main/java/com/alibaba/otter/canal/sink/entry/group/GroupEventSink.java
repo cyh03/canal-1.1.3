@@ -1,11 +1,11 @@
 package com.alibaba.otter.canal.sink.entry.group;
 
-import java.util.Arrays;
-import java.util.List;
-
 import com.alibaba.otter.canal.sink.CanalEventDownStreamHandler;
 import com.alibaba.otter.canal.sink.entry.EntryEventSink;
 import com.alibaba.otter.canal.store.model.Event;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 基于归并排序的sink处理
@@ -20,6 +20,7 @@ import com.alibaba.otter.canal.store.model.Event;
  * @author jianghang 2012-10-15 下午09:54:18
  * @version 1.0.0
  */
+//
 public class GroupEventSink extends EntryEventSink {
 
     private int          groupSize;

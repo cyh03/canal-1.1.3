@@ -1,11 +1,12 @@
 package com.alibaba.otter.canal.server;
 
-import java.util.concurrent.TimeUnit;
-
 import com.alibaba.otter.canal.protocol.ClientIdentity;
 import com.alibaba.otter.canal.protocol.Message;
 import com.alibaba.otter.canal.server.exception.CanalServerException;
 
+import java.util.concurrent.TimeUnit;
+
+//
 public interface CanalService {
 
     void subscribe(ClientIdentity clientIdentity) throws CanalServerException;

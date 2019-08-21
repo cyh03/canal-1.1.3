@@ -6,6 +6,7 @@ import com.alibaba.otter.canal.server.netty.listener.ChannelFutureAggregator.Cli
 /**
  * @author Chuanyi Li
  */
+//
 public class CanalServerWithNettyProfiler {
 
     public static final ClientInstanceProfiler NOP               = new DefaultClientInstanceProfiler();

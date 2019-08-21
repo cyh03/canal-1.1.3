@@ -1,8 +1,8 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.tsdb.dao;
 
-import java.util.HashMap;
-
 import com.google.common.collect.Maps;
+
+import java.util.HashMap;
 
 /**
  * canal数据的存储
@@ -11,6 +11,7 @@ import com.google.common.collect.Maps;
  * @since 3.2.5
  */
 @SuppressWarnings("deprecation")
+//
 public class MetaSnapshotDAO extends MetaBaseDAO {
 
     public Long insert(MetaSnapshotDO snapshotDO) {

@@ -28,6 +28,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
  *
  * @author agapple 2018年12月11日 下午1:28:32
  */
+//
 public class MQMessageUtils {
 
     @SuppressWarnings("deprecation")

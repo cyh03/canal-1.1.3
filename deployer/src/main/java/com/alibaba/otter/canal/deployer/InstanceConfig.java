@@ -10,6 +10,7 @@ import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
  * @author jianghang 2012-11-8 下午02:50:54
  * @version 1.0.0
  */
+//
 public class InstanceConfig {
 
     private InstanceConfig globalConfig;

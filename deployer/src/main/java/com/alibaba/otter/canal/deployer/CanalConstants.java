@@ -8,6 +8,7 @@ import java.text.MessageFormat;
  * @author jianghang 2012-11-8 下午03:15:55
  * @version 1.0.0
  */
+//
 public class CanalConstants {
 
     public static final String MDC_DESTINATION                   = "destination";

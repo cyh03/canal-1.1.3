@@ -1,5 +1,8 @@
 package com.taobao.tddl.dbsync.binlog;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
@@ -10,9 +13,6 @@ import java.lang.reflect.Method;
 import java.net.SocketTimeoutException;
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 /**
  * TODO: Document It!!
@@ -35,6 +35,7 @@ import org.apache.commons.logging.LogFactory;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class DirectLogFetcher extends LogFetcher {
 
     protected static final Log logger                          = LogFactory.getLog(DirectLogFetcher.class);

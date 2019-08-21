@@ -1,21 +1,17 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.local;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.channels.ClosedByInterruptException;
-import java.nio.channels.FileChannel;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.nio.channels.ClosedByInterruptException;
+import java.nio.channels.FileChannel;
 
 /**
  * @author jianghang 2012-7-7 下午03:10:47
  * @version 1.0.0
  */
+//
 public class BufferedFileDataInput {
 
     private static final Logger logger = LoggerFactory.getLogger(BufferedFileDataInput.class);

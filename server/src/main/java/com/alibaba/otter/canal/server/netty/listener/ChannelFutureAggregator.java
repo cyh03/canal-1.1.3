@@ -12,6 +12,7 @@ import static com.alibaba.otter.canal.server.netty.NettyUtils.HEADER_LENGTH;
 /**
  * @author Chuanyi Li
  */
+//
 public class ChannelFutureAggregator implements ChannelFutureListener {
 
     private ClientRequestResult result;

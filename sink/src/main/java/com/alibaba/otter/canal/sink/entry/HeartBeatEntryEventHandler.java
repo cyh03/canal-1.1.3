@@ -1,11 +1,11 @@
 package com.alibaba.otter.canal.sink.entry;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.alibaba.otter.canal.protocol.CanalEntry.EntryType;
 import com.alibaba.otter.canal.sink.AbstractCanalEventDownStreamHandler;
 import com.alibaba.otter.canal.store.model.Event;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 处理一下一下heartbeat数据
@@ -13,6 +13,7 @@ import com.alibaba.otter.canal.store.model.Event;
  * @author jianghang 2013-10-8 下午6:03:53
  * @since 1.0.12
  */
+//
 public class HeartBeatEntryEventHandler extends AbstractCanalEventDownStreamHandler<List<Event>> {
 
     public List<Event> before(List<Event> events) {

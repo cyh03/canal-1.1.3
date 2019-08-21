@@ -26,7 +26,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * <td>8 byte unsigned integer</td>
  * <td>The value of the variable.</td>
  * </tr>
- * </table>
+ * </table>如果查询使用LAST_INSERT_ID或INSERT_ID变量之一，则Intvar_log_event将在Query_log_event之前创建。每个Intvar_log_event都包含其中一个变量的值。此事件类型的后标头为空。身体有两个组成部分:
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
@@ -41,7 +41,10 @@ public final class IntvarLogEvent extends LogEvent {
      * <li>1 byte. A value indicating the variable type: LAST_INSERT_ID_EVENT =
      * 1 or INSERT_ID_EVENT = 2.</li>
      * <li>8 bytes. An unsigned integer indicating the value to be used for the
-     * LAST_INSERT_ID() invocation or AUTO_INCREMENT column.</li>
+     * LAST_INSERT_ID() invocation or AUTO_INCREMENT column.</li>固定数据部分:空
+     * 可变数据部分:
+     * 1个字节。指示变量类型的值:LAST_INSERT_ID_EVENT = 1或INSERT_ID_EVENT = 2。
+     * 8个字节。一个无符号整数，指示要用于LAST_INSERT_ID()调用或AUTO_INCREMENT列的值。
      * </ul>
      * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
      */

@@ -14,6 +14,7 @@ import com.alibaba.otter.canal.store.CanalEventStore;
  * @author jianghang 2012-7-12 下午12:04:58
  * @version 1.0.0
  */
+//
 public interface CanalInstance extends CanalLifeCycle {
 
     String getDestination();

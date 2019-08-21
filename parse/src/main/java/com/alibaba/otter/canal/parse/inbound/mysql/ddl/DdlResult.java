@@ -6,6 +6,7 @@ import com.alibaba.otter.canal.protocol.CanalEntry.EventType;
  * @author agapple 2017年8月1日 下午7:30:42
  * @since 3.2.5
  */
+//
 public class DdlResult {
 
     private String    schemaName;

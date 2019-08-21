@@ -17,7 +17,13 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  *   the LOG_EVENT_IGNORABLE_F flag set.  It is not strictly necessary
  *   that ignorable event types derive from Ignorable_log_event; they may
  *   just as well derive from Log_event and pass LOG_EVENT_IGNORABLE_F as
- *   argument to the Log_event constructor.
+ *   argument to the Log_event constructor.可忽略日志事件的基类。事件源于
+ * 这个类可以被不能忽略的奴隶安全地忽略
+ * 认识他们。较新的奴隶，将能够阅读和
+ * 处理它们。这是一个开放式的设计
+ * 因此，添加新的派生事件不会造成损害
+ * 支持可忽略日志事件机制的旧从属项
+ * (他们只会忽略无法识别的、可忽略的事件)。
  * </pre>
  * 
  * @author jianghang 2013-4-8 上午12:36:29

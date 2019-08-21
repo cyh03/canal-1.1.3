@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.alibaba.otter.canal.common.MQProperties;
 import com.alibaba.otter.canal.protocol.Message;
 
+//
 public interface CanalMQProducer {
 
     /**

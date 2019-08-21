@@ -1,14 +1,13 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.rds;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.alibaba.otter.canal.parse.exception.PositionNotFoundException;
 import com.alibaba.otter.canal.parse.inbound.ParserExceptionHandler;
 import com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser;
+import org.apache.commons.lang.StringUtils;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
 /**
  * aliyun rds的binlog parser支持
@@ -20,6 +19,7 @@ import com.alibaba.otter.canal.parse.inbound.mysql.MysqlEventParser;
  * @author chengjin.lyf on 2018/7/20 上午10:52
  * @since 1.0.25
  */
+//
 public class RdsBinlogEventParserProxy extends MysqlEventParser {
 
     private String                    rdsOpenApiUrl             = "https://rds.aliyuncs.com/"; // openapi地址

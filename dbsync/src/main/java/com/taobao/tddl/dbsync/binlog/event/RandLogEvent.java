@@ -27,7 +27,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * <td>8 byte unsigned integer</td>
  * <td>64 bit random seed2.</td>
  * </tr>
- * </table>
+ * </table> 记录下一个RAND()和PASSWORD()在4.1.0中使用的随机种子。4.1.1不需要它(它是可重复的)，所以不需要在4.1.1 for PASSWORD()中编写这个事件(但是编写它只是一种浪费，不会导致bug)。随机数生成的状态由128位组成，128位作为两个64位数字存储在内部。
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0

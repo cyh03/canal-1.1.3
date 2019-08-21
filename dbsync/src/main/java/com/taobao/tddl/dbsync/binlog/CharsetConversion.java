@@ -11,6 +11,7 @@ import org.apache.commons.logging.LogFactory;
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  */
+//
 public final class CharsetConversion {
 
     static final Log logger = LogFactory.getLog(CharsetConversion.class);

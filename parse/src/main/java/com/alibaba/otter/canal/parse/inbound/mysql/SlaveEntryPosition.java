@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.protocol.position.EntryPosition;
  * @author jianghang 2013-1-23 下午09:42:18
  * @version 1.0.0
  */
+//
 public class SlaveEntryPosition extends EntryPosition {
 
     private static final long serialVersionUID = 5271424551446372093L;

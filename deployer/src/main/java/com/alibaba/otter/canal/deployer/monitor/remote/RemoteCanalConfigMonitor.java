@@ -8,6 +8,7 @@ import java.util.Properties;
  * @author rewerma 2019-01-25 下午05:20:16
  * @version 1.0.0
  */
+//
 public interface RemoteCanalConfigMonitor {
     void onChange(Properties properties);
 }

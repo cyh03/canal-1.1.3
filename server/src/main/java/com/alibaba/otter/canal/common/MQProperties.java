@@ -8,6 +8,7 @@ import java.util.Properties;
  * @author machengyuan 2018-6-11 下午05:30:49
  * @version 1.0.0
  */
+//
 public class MQProperties {
 
     private String     servers                = "127.0.0.1:6667";

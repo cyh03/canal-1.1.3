@@ -1,10 +1,10 @@
 package com.alibaba.otter.canal.deployer.monitor.remote;
 
-import java.util.Properties;
-
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Properties;
 
 /**
  * 远程配置装载器工厂类
@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
  * @author rewerma 2019-01-25 下午05:20:16
  * @version 1.0.0
  */
+//
 public class RemoteConfigLoaderFactory {
 
     private static final Logger logger = LoggerFactory.getLogger(RemoteConfigLoaderFactory.class);

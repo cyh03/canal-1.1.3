@@ -4,6 +4,7 @@ package com.alibaba.otter.canal.store;
  * @author zebin.xuzb 2012-10-30 下午1:05:13
  * @since 1.0.0
  */
+//
 public class StoreInfo {
 
     private String storeName;

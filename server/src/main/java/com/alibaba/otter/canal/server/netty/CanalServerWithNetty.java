@@ -1,8 +1,12 @@
 package com.alibaba.otter.canal.server.netty;
 
-import java.net.InetSocketAddress;
-import java.util.concurrent.Executors;
-
+import com.alibaba.otter.canal.common.AbstractCanalLifeCycle;
+import com.alibaba.otter.canal.server.CanalServer;
+import com.alibaba.otter.canal.server.embedded.CanalServerWithEmbedded;
+import com.alibaba.otter.canal.server.netty.handler.ClientAuthenticationHandler;
+import com.alibaba.otter.canal.server.netty.handler.FixedHeaderFrameDecoder;
+import com.alibaba.otter.canal.server.netty.handler.HandshakeInitializationHandler;
+import com.alibaba.otter.canal.server.netty.handler.SessionHandler;
 import org.apache.commons.lang.StringUtils;
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.Channel;
@@ -13,13 +17,8 @@ import org.jboss.netty.channel.group.ChannelGroup;
 import org.jboss.netty.channel.group.DefaultChannelGroup;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 
-import com.alibaba.otter.canal.common.AbstractCanalLifeCycle;
-import com.alibaba.otter.canal.server.CanalServer;
-import com.alibaba.otter.canal.server.embedded.CanalServerWithEmbedded;
-import com.alibaba.otter.canal.server.netty.handler.ClientAuthenticationHandler;
-import com.alibaba.otter.canal.server.netty.handler.FixedHeaderFrameDecoder;
-import com.alibaba.otter.canal.server.netty.handler.HandshakeInitializationHandler;
-import com.alibaba.otter.canal.server.netty.handler.SessionHandler;
+import java.net.InetSocketAddress;
+import java.util.concurrent.Executors;
 
 /**
  * 基于netty网络服务的server实现
@@ -27,6 +26,7 @@ import com.alibaba.otter.canal.server.netty.handler.SessionHandler;
  * @author jianghang 2012-7-12 下午01:34:49
  * @version 1.0.0
  */
+//
 public class CanalServerWithNetty extends AbstractCanalLifeCycle implements CanalServer {
 
     private CanalServerWithEmbedded embeddedServer;      // 嵌入式server

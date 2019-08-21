@@ -40,12 +40,13 @@ import com.taobao.tddl.dbsync.binlog.event.LogHeader;
  * </tr>
  * </table>
  * - Strings are stored in various formats. The format of each string is
- * documented separately.
+ * documented separately.二进制日志事件定义。这包括所有类型日志事件的通用代码，以及每种类型日志事件的特定代码。-所有数字，无论是16位、24位、32位或64位数字，均以小端字节存储，即，除非另有说明，否则先取最不重要的字节。无符号整数的表示，称为填充整数。
  * 
  * @see mysql-5.1.60/sql/log_event.h
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public abstract class LogEvent {
 
     /*
@@ -105,7 +106,7 @@ public abstract class LogEvent {
     /**
      * NEW_LOAD_EVENT is like LOAD_EVENT except that it has a longer sql_ex,
      * allowing multibyte TERMINATED BY etc; both types share the same class
-     * (Load_log_event)
+     * (Load_log_event) NEW_LOAD_EVENT与LOAD_EVENT类似，只是它有一个更长的sql_ex，允许以etc结尾的多字节;这两种类型共享同一个类(Load_log_event)
      */
     public static final int    NEW_LOAD_EVENT                           = 12;
     public static final int    RAND_EVENT                               = 13;
@@ -146,7 +147,7 @@ public abstract class LogEvent {
     /**
      * In some situations, it is necessary to send over ignorable data to the
      * slave: data that a slave can handle in case there is code for handling
-     * it, but which can be ignored if it is not recognized.
+     * it, but which can be ignored if it is not recognized.在某些情况下，有必要将可忽略的数据发送给从服务器:如果有处理这些数据的代码，则从服务器可以处理这些数据，但是如果不能识别这些数据，则可以忽略这些数据。
      */
     public static final int    IGNORABLE_LOG_EVENT                      = 28;
     public static final int    ROWS_QUERY_LOG_EVENT                     = 29;
@@ -171,7 +172,7 @@ public abstract class LogEvent {
 
     /**
      * Extension of UPDATE_ROWS_EVENT, allowing partial values according to
-     * binlog_row_value_options.
+     * binlog_row_value_options.扩展UPDATE_ROWS_EVENT，根据binlog_row_value_options允许部分值。
      */
     public static final int    PARTIAL_UPDATE_ROWS_EVENT                = 39;
 
@@ -188,18 +189,27 @@ public abstract class LogEvent {
      * such that XA crash recovery can start from that file - and it is
      * guaranteed to find all XIDs that are prepared in storage engines but not
      * yet committed.
+Binlog检查点事件。用于XA主机崩溃恢复，不是
+*用于复制。binlog检查点事件指定一个binlog文件
+*这样XA崩溃恢复可以从该文件开始-它是
+*保证找到所有在存储引擎中准备的xid，但不是
+*提交。
      */
     public static final int    BINLOG_CHECKPOINT_EVENT                  = 161;
     /*
      * Gtid event. For global transaction ID, used to start a new event group,
      * instead of the old BEGIN query event, and also to mark stand-alone
-     * events.
+     * events.Gtid事件。对于全局事务ID，用于启动新的事件组，
+     *代替了旧的BEGIN查询事件，并且还可以标记为单机
+     *事件。
      */
     public static final int    GTID_EVENT                               = 162;
     /*
      * Gtid list event. Logged at the start of every binlog, to record the
      * current replication state. This consists of the last GTID seen for each
-     * replication domain.
+     * replication domain.Gtid事件列表。在每个binlog的开头记录，以记录
+     *当前复制状态。这包括每一个所看到的最后一个GTID
+     *复制域。
      */
     public static final int    GTID_LIST_EVENT                          = 163;
 
@@ -210,7 +220,7 @@ public abstract class LogEvent {
 
     /**
      * 1 byte length, 1 byte format Length is total length in bytes, including 2
-     * byte header Length values 0 and 1 are currently invalid and reserved.
+     * byte header Length values 0 and 1 are currently invalid and reserved.1字节长度，1字节格式长度是总长度(以字节为单位)，包括2字节头长度值0和1目前是无效和保留的。
      */
     public static final int    EXTRA_ROW_INFO_LEN_OFFSET                = 0;
     public static final int    EXTRA_ROW_INFO_FORMAT_OFFSET             = 1;
@@ -258,7 +268,7 @@ public abstract class LogEvent {
      * For an event, 'e', carrying a type code, that a slave, 's', does not
      * recognize, 's' will check 'e' for LOG_EVENT_IGNORABLE_F, and if the flag
      * is set, then 'e' is ignored. Otherwise, 's' acknowledges that it has
-     * found an unknown event in the relay log.
+     * found an unknown event in the relay log.对于一个事件，'e'携带一个类型代码，而奴隶's'不能识别，'s'将检查'e'是否为LOG_EVENT_IGNORABLE_F，如果设置了标志，那么'e'将被忽略。否则，'s'承认它在中继日志中发现了未知事件。
      */
     public static final int    LOG_EVENT_IGNORABLE_F                    = 0x80;
 
@@ -409,7 +419,7 @@ public abstract class LogEvent {
 
     /**
      * The total size of this event, in bytes. In other words, this is the sum
-     * of the sizes of Common-Header, Post-Header, and Body.
+     * of the sizes of Common-Header, Post-Header, and Body.此事件的总大小，以字节为单位。换句话说，这是共页眉、后页眉和正文大小的总和。
      */
     public final int getEventLen() {
         return header.getEventLen();
@@ -427,7 +437,7 @@ public abstract class LogEvent {
      * the beginning of the file. In a binlog that is not a relay log, this is
      * just the position of the next event, in bytes from the beginning of the
      * file. In a relay log, this is the position of the next event in the
-     * master's binlog.
+     * master's binlog.主二进制日志中下一个事件的位置，以文件开头的字节为单位。在不是中继日志的binlog中，这只是下一个事件的位置，以字节为单位，从文件开始。在中继日志中，这是主binlog中的下一个事件的位置。
      */
     public final long getLogPos() {
         return header.getLogPos();

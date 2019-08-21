@@ -1,12 +1,12 @@
 package com.alibaba.otter.canal.sink.entry.group;
 
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import com.alibaba.otter.canal.protocol.CanalEntry.EntryType;
 import com.alibaba.otter.canal.sink.exception.CanalSinkException;
 import com.alibaba.otter.canal.store.model.Event;
+
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 相比于{@linkplain TimelineBarrier}，增加了按事务支持，会按照事务进行分库合并处理
@@ -31,6 +31,7 @@ public class TimelineTransactionBarrier extends TimelineBarrier {
      * 2: 非事务数据处理中
      * </pre>
      */
+//
     private AtomicInteger        txState       = new AtomicInteger(0);
 
     public TimelineTransactionBarrier(int groupSize){

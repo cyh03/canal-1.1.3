@@ -12,6 +12,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
  * @author jianghang 2012-7-11 上午11:22:19
  * @version 1.0.0
  */
+//
 public class AuthenticationInfo {
 
 

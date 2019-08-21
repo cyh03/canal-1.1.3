@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.common.CanalLifeCycle;
  * @author jianghang 2012-6-21 下午04:03:25
  * @version 1.0.0
  */
+//
 public interface CanalEventParser<EVENT> extends CanalLifeCycle {
 
 }

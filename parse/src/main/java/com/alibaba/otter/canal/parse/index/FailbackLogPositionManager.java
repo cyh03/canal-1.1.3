@@ -14,6 +14,7 @@ import com.alibaba.otter.canal.protocol.position.LogPosition;
  * 应用场景：比如针对内存buffer，出现HA切换，先尝试从内存buffer区中找到lastest position，如果不存在才尝试找一下meta里消费的信息
  * </pre>
  */
+//
 public class FailbackLogPositionManager extends AbstractLogPositionManager {
 
     private final static Logger           logger = LoggerFactory.getLogger(FailbackLogPositionManager.class);

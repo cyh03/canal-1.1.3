@@ -41,6 +41,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 
+//
 public class HttpHelper {
 
     protected static final Logger logger = LoggerFactory.getLogger(HttpHelper.class);

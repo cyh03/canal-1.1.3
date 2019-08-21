@@ -1,23 +1,19 @@
 package com.alibaba.otter.canal.parse.index;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import com.alibaba.otter.canal.parse.exception.CanalParseException;
+import com.alibaba.otter.canal.protocol.position.LogPosition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.alibaba.otter.canal.parse.exception.CanalParseException;
-import com.alibaba.otter.canal.protocol.position.LogPosition;
-
 /**
  * Created by yinxiu on 17/3/18. Email: marklin.hz@gmail.com
  */
+//
 public class PeriodMixedLogPositionManager extends AbstractLogPositionManager {
 
     private static final Logger         logger       = LoggerFactory.getLogger(PeriodMixedLogPositionManager.class);

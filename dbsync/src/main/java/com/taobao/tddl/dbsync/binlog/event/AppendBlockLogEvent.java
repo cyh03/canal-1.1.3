@@ -9,6 +9,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public class AppendBlockLogEvent extends LogEvent {
 
     private final LogBuffer blockBuf;

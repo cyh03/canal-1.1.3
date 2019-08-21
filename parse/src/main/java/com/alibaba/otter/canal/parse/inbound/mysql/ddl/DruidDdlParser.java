@@ -43,6 +43,7 @@ import com.alibaba.otter.canal.protocol.CanalEntry.EventType;
  * @author agapple 2017年7月27日 下午4:05:34
  * @since 1.0.25
  */
+//
 public class DruidDdlParser {
 
     public static List<DdlResult> parse(String queryString, String schmeaName) {

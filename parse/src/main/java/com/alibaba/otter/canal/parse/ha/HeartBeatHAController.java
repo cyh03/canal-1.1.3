@@ -13,6 +13,7 @@ import com.alibaba.otter.canal.parse.inbound.HeartBeatCallback;
  * @author jianghang 2012-7-6 下午02:33:30
  * @version 1.0.0
  */
+//
 public class HeartBeatHAController extends AbstractCanalLifeCycle implements CanalHAController, HeartBeatCallback {
 
     private static final Logger logger              = LoggerFactory.getLogger(HeartBeatHAController.class);

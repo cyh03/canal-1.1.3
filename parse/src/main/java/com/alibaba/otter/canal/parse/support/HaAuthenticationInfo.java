@@ -8,6 +8,7 @@ import java.util.List;
  * @author zebin.xuzb 2012-9-26 下午3:08:11
  * @version 1.0.0
  */
+//
 public class HaAuthenticationInfo {
 
     private AuthenticationInfo       master;

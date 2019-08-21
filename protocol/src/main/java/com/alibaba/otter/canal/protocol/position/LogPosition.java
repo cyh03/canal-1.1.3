@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.protocol.position;
  * @author jianghang 2012-6-21 上午10:52:41
  * @version 1.0.0
  */
+//
 public class LogPosition extends Position {
 
     private static final long serialVersionUID = 3875012010277005819L;

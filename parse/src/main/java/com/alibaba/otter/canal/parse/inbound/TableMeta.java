@@ -19,6 +19,7 @@ import com.taobao.tddl.dbsync.binlog.event.TableMapLogEvent;
  * @author jianghang 2013-1-18 下午12:24:59
  * @version 1.0.0
  */
+//
 public class TableMeta {
 
     private String          schema;

@@ -1,10 +1,8 @@
 package com.alibaba.otter.canal.server.netty;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.ArrayList;
-import java.util.List;
-
+import com.alibaba.otter.canal.protocol.CanalPacket;
+import com.alibaba.otter.canal.protocol.CanalPacket.Ack;
+import com.alibaba.otter.canal.protocol.CanalPacket.Packet;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
 import org.jboss.netty.buffer.CompositeChannelBuffer;
@@ -16,10 +14,12 @@ import org.jboss.netty.util.Timer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.otter.canal.protocol.CanalPacket;
-import com.alibaba.otter.canal.protocol.CanalPacket.Ack;
-import com.alibaba.otter.canal.protocol.CanalPacket.Packet;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.ArrayList;
+import java.util.List;
 
+//
 public class NettyUtils {
 
     private static final Logger logger           = LoggerFactory.getLogger(NettyUtils.class);

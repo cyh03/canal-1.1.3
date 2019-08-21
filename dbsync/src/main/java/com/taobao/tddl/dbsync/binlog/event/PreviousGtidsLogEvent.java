@@ -8,6 +8,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * @version 1.0.3
  * @since mysql 5.6
  */
+//
 public class PreviousGtidsLogEvent extends LogEvent {
 
     public PreviousGtidsLogEvent(LogHeader header, LogBuffer buffer, FormatDescriptionLogEvent descriptionEvent){

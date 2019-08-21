@@ -12,6 +12,7 @@ import org.jboss.netty.handler.codec.replay.VoidEnum;
  * @author jianghang 2012-10-24 上午11:31:39
  * @version 1.0.0
  */
+//
 public class FixedHeaderFrameDecoder extends ReplayingDecoder<VoidEnum> {
 
     protected Object decode(ChannelHandlerContext ctx, Channel channel, ChannelBuffer buffer, VoidEnum state)

@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.server;
  * @author machengyuan 2018-8-23 下午05:20:29
  * @version 1.0.0
  */
+//
 public interface CanalServerStarter {
 
     void init();

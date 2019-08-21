@@ -10,6 +10,7 @@ import com.alibaba.otter.canal.instance.core.CanalInstance;
  * @see CanalMetricsProvider
  * @author Chuanyi Li
  */
+//
 public interface CanalMetricsService {
 
     /**

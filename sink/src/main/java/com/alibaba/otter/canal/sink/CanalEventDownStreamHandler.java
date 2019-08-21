@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.common.CanalLifeCycle;
  * @author jianghang 2012-7-31 下午03:06:26
  * @version 1.0.0
  */
+//
 public interface CanalEventDownStreamHandler<T> extends CanalLifeCycle {
 
     /**

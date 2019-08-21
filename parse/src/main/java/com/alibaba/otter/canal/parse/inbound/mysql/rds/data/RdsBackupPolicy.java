@@ -4,6 +4,7 @@ package com.alibaba.otter.canal.parse.inbound.mysql.rds.data;
  * @author chengjin.lyf on 2018/8/7 下午2:26
  * @since 1.0.25
  */
+//
 public class RdsBackupPolicy {
 
     /**

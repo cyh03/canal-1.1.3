@@ -12,6 +12,7 @@ import com.alibaba.otter.canal.store.model.Event;
  * @author jianghang 2012-6-19 下午05:49:21
  * @version 1.0.0
  */
+//
 public class CanalEventUtils {
 
     /**

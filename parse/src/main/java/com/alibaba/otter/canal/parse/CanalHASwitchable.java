@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.parse.support.AuthenticationInfo;
  * @author jianghang 2012-6-26 下午05:41:43
  * @version 1.0.0
  */
+//
 public interface CanalHASwitchable {
 
     public void doSwitch();

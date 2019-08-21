@@ -1,5 +1,15 @@
 package com.alibaba.otter.canal.deployer.monitor.remote;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.otter.canal.common.utils.CommonUtils;
+import com.alibaba.otter.canal.common.utils.NamedThreadFactory;
+import com.alibaba.otter.canal.deployer.CanalConstants;
+import com.google.common.base.Joiner;
+import com.google.common.collect.MapMaker;
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.ByteArrayInputStream;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
@@ -12,23 +22,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.otter.canal.common.utils.CommonUtils;
-import com.alibaba.otter.canal.common.utils.NamedThreadFactory;
-import com.alibaba.otter.canal.deployer.CanalConstants;
-import com.google.common.base.Joiner;
-import com.google.common.collect.MapMaker;
-
 /**
  * 基于数据库的远程配置装载器
  *
  * @author rewerma 2019-01-25 下午05:20:16
  * @version 1.0.0
  */
+//
 public class DbRemoteConfigLoader implements RemoteConfigLoader {
 
     private static final Logger      logger                 = LoggerFactory.getLogger(DbRemoteConfigLoader.class);

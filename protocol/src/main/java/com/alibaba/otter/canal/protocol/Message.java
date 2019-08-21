@@ -1,19 +1,19 @@
 package com.alibaba.otter.canal.protocol;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
-
 import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
 import com.alibaba.otter.canal.protocol.CanalEntry.Entry;
 import com.google.protobuf.ByteString;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author zebin.xuzb @ 2012-6-19
  * @version 1.0.0
  */
+//
 public class Message implements Serializable {
 
     private static final long      serialVersionUID = 1234034768477580009L;

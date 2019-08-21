@@ -1,15 +1,16 @@
 package com.alibaba.otter.canal.parse.index;
 
-import java.util.Map;
-import java.util.Set;
-
 import com.alibaba.otter.canal.parse.exception.CanalParseException;
 import com.alibaba.otter.canal.protocol.position.LogPosition;
 import com.google.common.collect.MapMaker;
 
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by yinxiu on 17/3/17. Email: marklin.hz@gmail.com
  */
+//
 public class MemoryLogPositionManager extends AbstractLogPositionManager {
 
     private Map<String, LogPosition> positions;

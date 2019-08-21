@@ -8,6 +8,7 @@ import com.alibaba.otter.canal.common.CanalLifeCycle;
  * @author jianghang 2012-8-22 下午10:08:56
  * @version 1.0.0
  */
+//
 public interface CanalAlarmHandler extends CanalLifeCycle {
 
     /**

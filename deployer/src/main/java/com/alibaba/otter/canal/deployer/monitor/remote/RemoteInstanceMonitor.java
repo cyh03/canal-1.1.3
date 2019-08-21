@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.deployer.monitor.remote;
  * @author rewerma 2019-01-25 下午05:20:16
  * @version 1.0.0
  */
+//
 public interface RemoteInstanceMonitor {
 
     /**

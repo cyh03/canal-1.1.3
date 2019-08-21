@@ -249,7 +249,7 @@ public final class LogHeader {
 
     /**
      * The total size of this event, in bytes. In other words, this is the sum
-     * of the sizes of Common-Header, Post-Header, and Body.
+     * of the sizes of Common-Header, Post-Header, and Body.此事件的总大小，以字节为单位。换句话说，这是共页眉、后页眉和正文大小的总和。
      */
     public final int getEventLen() {
         return eventLen;

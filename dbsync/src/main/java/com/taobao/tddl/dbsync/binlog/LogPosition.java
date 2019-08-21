@@ -6,6 +6,7 @@ package com.taobao.tddl.dbsync.binlog;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public class LogPosition implements Cloneable, Comparable<LogPosition> {
 
     /* binlog file's name */

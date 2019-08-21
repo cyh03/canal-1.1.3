@@ -30,7 +30,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * <td align="right">MSGLEN</td>
  * <td>The message, if present. Not null terminated.</td>
  * </tr>
- * </table>
+ * </table>代表一个事件，一个发生在大师身上的不寻常的事件。该事件用于通知从服务器，主服务器上发生了不寻常的事情，可能导致数据库处于不一致的状态。
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0

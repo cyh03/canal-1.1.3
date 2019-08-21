@@ -17,6 +17,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * @author agapple 2018年7月3日 下午4:54:17
  * @since 1.0.26
  */
+//
 public interface MultiStageCoprocessor extends CanalLifeCycle {
 
     /**

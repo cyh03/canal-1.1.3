@@ -6,7 +6,7 @@ import com.taobao.tddl.dbsync.binlog.LogBuffer;
 
 /**
  * For binlog version 4. This event is saved by threads which read it, as they
- * need it for future use (to decode the ordinary events).
+ * need it for future use (to decode the ordinary events).对于binlog版本4。这个事件是由读取它的线程保存的，因为它们需要它以便将来使用(解码普通事件)。
  * 
  * @see mysql-5.1.60/sql/log_event.cc - Format_description_log_event
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
@@ -17,7 +17,7 @@ public final class FormatDescriptionLogEvent extends StartLogEventV3 {
     /**
      * The number of types we handle in Format_description_log_event
      * (UNKNOWN_EVENT is not to be handled, it does not exist in binlogs, it
-     * does not have a format).
+     * does not have a format).我们在Format_description_log_event中处理的类型数量(UNKNOWN_EVENT不需要处理，它不存在于binlogs中，它没有格式)。
      */
     public static final int   LOG_EVENT_TYPES                     = (ENUM_END_EVENT - 1);
 
@@ -79,7 +79,7 @@ public final class FormatDescriptionLogEvent extends StartLogEventV3 {
      * The size of the fixed header which _all_ events have (for binlogs written
      * by this version, this is equal to LOG_EVENT_HEADER_LEN), except
      * FORMAT_DESCRIPTION_EVENT and ROTATE_EVENT (those have a header of size
-     * LOG_EVENT_MINIMAL_HEADER_LEN).
+     * LOG_EVENT_MINIMAL_HEADER_LEN).除了FORMAT_DESCRIPTION_EVENT和ROTATE_EVENT(它们的头文件大小为LOG_EVENT_MINIMAL_HEADER_LEN)之外，_all_events拥有的固定头文件的大小(对于由这个版本编写的binlogs，它等于LOG_EVENT_HEADER_LEN)。
      */
     protected final int       commonHeaderLen;
     protected int             numberOfEventTypes;

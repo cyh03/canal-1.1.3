@@ -9,6 +9,7 @@ import com.alibaba.otter.canal.server.exception.CanalServerException;
  * @author jianghang 2012-7-12 下午01:32:29
  * @version 1.0.0
  */
+//
 public interface CanalServer extends CanalLifeCycle {
 
     void start() throws CanalServerException;

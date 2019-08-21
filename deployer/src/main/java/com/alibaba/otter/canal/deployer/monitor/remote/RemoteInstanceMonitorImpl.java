@@ -1,12 +1,11 @@
 package com.alibaba.otter.canal.deployer.monitor.remote;
 
-import java.io.File;
-import java.io.FileWriter;
-
+import com.alibaba.otter.canal.common.utils.CommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.otter.canal.common.utils.CommonUtils;
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  * 远程xxx/instance.properties配置监听器实现
@@ -14,6 +13,7 @@ import com.alibaba.otter.canal.common.utils.CommonUtils;
  * @author rewerma 2019-01-25 下午05:20:16
  * @version 1.0.0
  */
+//
 public class RemoteInstanceMonitorImpl implements RemoteInstanceMonitor {
 
     private static final Logger logger = LoggerFactory.getLogger(RemoteInstanceMonitorImpl.class);

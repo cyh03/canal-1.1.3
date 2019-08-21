@@ -1,14 +1,15 @@
 package com.alibaba.otter.canal.parse.inbound;
 
-import java.io.IOException;
-
 import com.alibaba.otter.canal.parse.driver.mysql.packets.GTIDSet;
+
+import java.io.IOException;
 
 /**
  * 通用的Erosa的链接接口, 用于一般化处理mysql/oracle的解析过程
  * 
  * @author: yuanzu Date: 12-9-20 Time: 下午2:47
  */
+//
 public interface ErosaConnection {
 
     public void connect() throws IOException;

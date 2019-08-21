@@ -18,6 +18,7 @@ import com.alibaba.otter.canal.server.netty.NettyUtils;
  * @author jianghang 2012-10-24 上午11:39:54
  * @version 1.0.0
  */
+//
 public class HandshakeInitializationHandler extends SimpleChannelHandler {
 
     // support to maintain socket channel.

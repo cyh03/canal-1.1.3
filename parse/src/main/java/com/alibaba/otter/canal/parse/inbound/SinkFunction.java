@@ -6,6 +6,7 @@ package com.alibaba.otter.canal.parse.inbound;
  * @author: yuanzu Date: 12-9-20 Time: 下午2:50
  */
 
+//
 public interface SinkFunction<EVENT> {
 
     public boolean sink(EVENT event);

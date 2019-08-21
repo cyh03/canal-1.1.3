@@ -33,7 +33,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * event (determined by the length field of the Common-Header)</td>
  * <td>Name of the binlog to rotate to.</td>
  * </tr>
- * </table>
+ * </table>当我们转向使用序列id时，这将是不赞成的
  * 
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
@@ -53,7 +53,9 @@ public final class RotateLogEvent extends LogEvent {
      * <ul>
      * <li>The name of the next binary log. The filename is not null-terminated.
      * Its length is the event size minus the size of the fixed parts.</li>
-     * </ul>
+     * </ul>8个字节。下一个日志文件中第一个事件的位置。总是包含数字4(意味着下一个事件从下一个二进制日志中的位置4开始)。这个场在v1中不存在;假设这个值是4。
+     * 可变数据部分:
+     * 下一个二进制日志的名称。文件名不是以null结尾的。它的长度是事件大小减去固定部分的大小。
      * Source : http://forge.mysql.com/wiki/MySQL_Internals_Binary_Log
      */
     private final String          filename;

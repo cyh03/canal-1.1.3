@@ -9,6 +9,7 @@ import java.util.concurrent.TimeoutException;
  * @author jianghang 2012-10-18 下午05:07:35
  * @version 1.0.0
  */
+//
 public interface GroupBarrier<T> {
 
     /**

@@ -8,6 +8,7 @@ import com.taobao.tddl.dbsync.binlog.LogEvent;
  * @version 1.0.26
  * @since mysql 5.7
  */
+//
 public class ViewChangeEvent extends LogEvent {
 
     public ViewChangeEvent(LogHeader header, LogBuffer buffer, FormatDescriptionLogEvent descriptionEvent){

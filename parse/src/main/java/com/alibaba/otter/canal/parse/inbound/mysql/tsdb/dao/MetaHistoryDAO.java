@@ -12,6 +12,7 @@ import com.google.common.collect.Maps;
  * @since 3.2.5
  */
 @SuppressWarnings("deprecation")
+//
 public class MetaHistoryDAO extends MetaBaseDAO {
 
     public Long insert(MetaHistoryDO metaDO) {

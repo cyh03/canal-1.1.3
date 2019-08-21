@@ -1,19 +1,19 @@
 package com.alibaba.otter.canal.parse.index;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.alibaba.otter.canal.common.zookeeper.ZkClientx;
 import com.alibaba.otter.canal.parse.exception.CanalParseException;
 import com.alibaba.otter.canal.protocol.position.LogPosition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by yinxiu on 17/3/17. Email: marklin.hz@gmail.com Memory first.
  * Asynchronous commit position info to ZK.
  */
+//
 public class MixedLogPositionManager extends AbstractLogPositionManager {
 
     private final Logger                      logger = LoggerFactory.getLogger(MixedLogPositionManager.class);

@@ -1,12 +1,12 @@
 package com.taobao.tddl.dbsync.binlog;
 
+import com.taobao.tddl.dbsync.binlog.event.FormatDescriptionLogEvent;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
-
-import com.taobao.tddl.dbsync.binlog.event.FormatDescriptionLogEvent;
 
 /**
  * TODO: Document It!!
@@ -29,6 +29,7 @@ import com.taobao.tddl.dbsync.binlog.event.FormatDescriptionLogEvent;
  * @author <a href="mailto:changyuan.lh@taobao.com">Changyuan.lh</a>
  * @version 1.0
  */
+//
 public final class FileLogFetcher extends LogFetcher {
 
     public static final byte[] BINLOG_MAGIC = { -2, 0x62, 0x69, 0x6e };

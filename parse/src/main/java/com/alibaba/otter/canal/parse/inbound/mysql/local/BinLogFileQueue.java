@@ -1,21 +1,15 @@
 package com.alibaba.otter.canal.parse.inbound.mysql.local;
 
+import com.alibaba.otter.canal.parse.exception.CanalParseException;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.IOFileFilter;
+
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.IOFileFilter;
-
-import com.alibaba.otter.canal.parse.exception.CanalParseException;
 
 /**
  * 维护binlog文件列表
@@ -23,6 +17,7 @@ import com.alibaba.otter.canal.parse.exception.CanalParseException;
  * @author jianghang 2012-7-7 下午03:48:05
  * @version 1.0.0
  */
+//
 public class BinLogFileQueue {
 
     private String              baseName       = "mysql-bin.";

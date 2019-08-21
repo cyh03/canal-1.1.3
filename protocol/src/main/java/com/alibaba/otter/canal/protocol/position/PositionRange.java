@@ -1,10 +1,9 @@
 package com.alibaba.otter.canal.protocol.position;
 
-import java.io.Serializable;
-
+import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
+import java.io.Serializable;
 
 /**
  * 描述一个position范围
@@ -12,6 +11,7 @@ import com.alibaba.otter.canal.common.utils.CanalToStringStyle;
  * @author jianghang 2012-7-10 下午05:28:38
  * @version 1.0.0
  */
+//
 public class PositionRange<T extends Position> implements Serializable {
 
     private static final long serialVersionUID = -9162037079815694784L;

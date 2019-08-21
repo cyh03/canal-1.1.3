@@ -21,6 +21,7 @@ import com.alibaba.otter.canal.protocol.CanalEntry.EventType;
  * @author jianghang 2013-1-22 下午10:03:22
  * @version 1.0.0
  */
+//
 public class SimpleDdlParser {
 
     public static final String CREATE_PATTERN         = "^\\s*CREATE\\s*(TEMPORARY)?\\s*TABLE\\s*(.*)$";
